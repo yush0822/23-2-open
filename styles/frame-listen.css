@@ -3092,7 +3092,7 @@ body {
   background-color: #ffffff;
 }
 .frame-24-XxD .frame-27-YAV .frame-47-SfX .frame-53-KUR {
-  width: 100%;
+  width: 53%;
   height: 100%;
   position: absolute;
   left: 0;
@@ -3112,7 +3112,7 @@ body {
   font-size: 2.8rem;
   font-weight: 400;
   line-height: 1.2102272851;
-  color: #000000;
+  color: #ffffff;
   font-family: Inter, 'Source Sans Pro';
   white-space: nowrap;
   align-items: baseline;
@@ -3144,7 +3144,7 @@ body {
   font-size: 2.8rem;
   font-weight: 400;
   line-height: 1.2102272851;
-  color: #000000;
+  color: #ffffff;
   font-family: Inter, 'Source Sans Pro';
   white-space: nowrap;
   align-items: baseline;
@@ -3155,7 +3155,7 @@ body {
   font-size: 2.8rem;
   font-weight: 400;
   line-height: 1.2125;
-  color: #000000;
+  color: #ffffff;
   font-family: Inter, 'Source Sans Pro';
 }
 .frame-24-XxD .frame-27-YAV .frame-47-SfX .frame-53-KUR .frame-57-yau .frame-57-yau-sub-1 {
@@ -3166,13 +3166,8 @@ body {
   font-family: Inter, 'Source Sans Pro';
   padding: 1rem 0rem 1rem 2rem;
 }
-.frame-24-XxD .frame-27-YAV .frame-47-SfX .frame-53-KUR .auto-group-iuwq-veZ {
-  width: 100%;
-  height: 12.2rem;
-  position: relative;
-  flex-shrink: 0;
-}
-.frame-24-XxD .frame-27-YAV .frame-47-SfX .frame-53-KUR .auto-group-iuwq-veZ .frame-59-Ug5 {
+
+.frame-24-XxD .frame-27-YAV .frame-47-SfX .frame-53-KUR .frame-59-Ug5 {
   box-sizing: border-box;
   padding: 1.95rem 0;
   width: 100%;
@@ -3182,22 +3177,22 @@ body {
   font-size: 2.8rem;
   font-weight: 400;
   line-height: 1.2102272851;
-  color: #000000;
+  color: #ffffff;
   font-family: Inter, 'Source Sans Pro';
   white-space: nowrap;
   align-items: baseline;
   border: solid 0.1rem #7f7f7f;
   flex-shrink: 0;
 }
-.frame-24-XxD .frame-27-YAV .frame-47-SfX .frame-53-KUR .auto-group-iuwq-veZ .frame-59-Ug5 .frame-59-Ug5-sub-0 {
+.frame-24-XxD .frame-27-YAV .frame-47-SfX .frame-53-KUR .frame-59-Ug5 .frame-59-Ug5-sub-0 {
   font-size: 2.2rem;
   font-weight: 400;
   line-height: 1.2125;
-  color: #000000;
+  color: #ffffff;
   font-family: Inter, 'Source Sans Pro';
 }
-.frame-24-XxD .frame-27-YAV .frame-47-SfX .frame-53-KUR .auto-group-iuwq-veZ .frame-59-Ug5 .frame-59-Ug5-sub-1 {
-  font-size: 2.8rem;
+.frame-24-XxD .frame-27-YAV .frame-47-SfX .frame-53-KUR .frame-59-Ug5 .frame-59-Ug5-sub-1 {
+  font-size: 2.2rem;
   font-weight: 600;
   line-height: 1.2125;
   color: #ffffff;
@@ -3205,37 +3200,49 @@ body {
   padding: 1rem 0rem 1rem 2rem;
   
 }
-.frame-24-XxD .frame-27-YAV .frame-47-SfX .frame-53-KUR .auto-group-iuwq-veZ .frame-56-orm {
+.frame-24-XxD .frame-27-YAV .frame-47-SfX .frame-53-KUR .frame-56-orm {
   box-sizing: border-box;
-  padding: 1rem 0rem 1rem 2rem;
-  width: 100%;
-  height: 7.3rem;
-  position: absolute;
-  left: 0;
-  top: 0;
-  overflow: hidden;
-  text-align: left;
-  display: flex;
-  font-size: 2.4rem;
-  font-weight: 600;
-  line-height: 1.2125;
-  color: #ffffff;
-  font-family: Inter, 'Source Sans Pro';
-  white-space: nowrap;
-  border: solid 0.1rem #7f7f7f;
-}
-.frame-24-XxD .frame-27-YAV .frame-47-SfX .frame-53-KUR .frame-60-UT7 {
-  box-sizing: border-box;
-  padding: 2.3rem 0;
+  padding: 1.95rem 0;
   width: 100%;
   overflow: hidden;
   position: relative;
   display: flex;
-  top: 7rem;
+  font-size: 2.8rem;
+  font-weight: 400;
+  line-height: 1.2102272851;
+  color: #ffffff;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  align-items: baseline;
+  border: solid 0.1rem #7f7f7f;
+  flex-shrink: 0;
+}
+.frame-24-XxD .frame-27-YAV .frame-47-SfX .frame-53-KUR .frame-56-orm .frame-56-UT7-sub-0 {
   font-size: 2.2rem;
   font-weight: 400;
-  line-height: 1.2102272727;
+  line-height: 1.2125;
   color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+}
+.frame-24-XxD .frame-27-YAV .frame-47-SfX .frame-53-KUR .frame-56-orm .frame-56-UT7-sub-1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 1.2125;
+  color: #ffffff;
+  font-family: Inter, 'Source Sans Pro';
+  padding: 1rem 0rem 1rem 2rem;
+}
+.frame-24-XxD .frame-27-YAV .frame-47-SfX .frame-53-KUR .frame-60-UT7 {
+  box-sizing: border-box;
+  padding: 1.95rem 0;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  font-size: 2.8rem;
+  font-weight: 400;
+  line-height: 1.2102272851;
+  color: #ffffff;
   font-family: Inter, 'Source Sans Pro';
   white-space: nowrap;
   align-items: baseline;
