@@ -1,0 +1,73 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/login-style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- action속성 : form에 작성한 데이터를 어디로 보낼지 지정 -->
+    <div id="join_wrap" class="wrap">        
+        <div>
+            <a href="index.html" class="frame-4-yBw">
+            <img src="./assets/frame-4.png" alt="Description of the image" style="width: 50%; height: 7%;margin-bottom:10%;">
+            </a>
+            <h1 id="login-header">회원가입</h1>
+            <form action="join" method="post" name="regiform" id="join_form" class="form"
+                onsubmit="return sendit()">
+                <p><input type="text" name="userid" id="userid" onblur = "idCheck()" placeholder="ID"><br>
+                    <!-- <input type="button" id="checkIdBtn" value="check"> -->
+                    <p id = "check-userid"></p>
+                </p>
+                <p id="result">&nbsp;</p>
+                <p><input type="password" name="userpw" id="userpw" placeholder="Password"></p> <!--DB에 저장된 값들과 비교 -->
+                <!--<p><input type="password" name="userpw_ch" id="userpw_ch" placeholder="Password Check"></p>-->
+                <p><input type="text" name="username" id="username" placeholder="Name"></p>
+                <p><input type="text" name="userphone" id="userphone" placeholder="Phone Number(not -)"></p>
+                <p><input type="text" name="useremail" id="useremail" placeholder="E-mail"></p>
+                <!--<p class="hobbystr">
+                    <label for="drive">Drive <input type="checkbox" name="tage[]" id="drive" value="Drive"></label>
+                    <label for="movie">Movie <input type="checkbox" name="tage[]" id="movie" value="Movie"></label>
+                    <label for="study">Study <input type="checkbox" name="tage[]" id="study" value="Study"></label>
+                    <label for="game">Game <input type="checkbox" name="tage[]" id="game" value="Game"></label>
+                    <label for="health">Health <input type="checkbox" name="tage[]" id="health" value="Health"></label>
+                </p>-->
+                <p><input type="submit" value="Sign Up" class="form_btn"></p>
+            </form>
+        </div>
+    </div>
+    <script src="join.js"></script>
+    <script th : inline = "javascript">
+        const idCheck = () => {
+            const id = document.getElementById("userid").value;
+            const checkUserId = document.getElementById("check-userid");
+            console.log("입력값 : ", id);
+            $.ajax({
+                // 요청방식 : post, url : "id-check", 데이터 : 아이디
+                type : "post",
+                url : "/member/id-check",
+                data : {
+                    "userid" : id
+                },
+                 success: function(res) {
+                console.log("요청성공", res);
+                if (res == "ok") {
+                    console.log("사용가능한 아이디");
+                    checkUserId.style.color = "green";
+                    checkUserId.innerHTML = "사용가능한 아이디";
+                }
+                else {
+                    console.log("이미 사용중인 아이디");
+                    checkUserId.style.color = "red";
+                    checkUserId.innerHTML = "이미 사용중인 아이디";
+                }
+            },
+            error: function(err) {
+                console.log("에러발생", err);
+                }
+            });
+        }
+    </script>
+</body>
