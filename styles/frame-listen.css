@@ -3087,7 +3087,7 @@ body {
   height: 50%;
   position: absolute;
   left: 0;
-  top: 0;
+  top: 2%;
   overflow: hidden;
   background-color: #ffffff;
 }
@@ -3096,7 +3096,7 @@ body {
   height: 100%;
   position: absolute;
   left: 0;
-  top: 50%;
+  top: 55%;
   overflow: hidden;
   align-items: center;
   display: flex;
@@ -3269,7 +3269,40 @@ body {
   height: 70%;
   position: absolute;
   left: 60%;
-  top: 0.1rem;
+  top: 2%;
   overflow: hidden;
-  background-color: #ffffff;
+  background-color: #ffffff00;
+  border-radius: 10px;
+  border: solid 0.1rem #7f7f7f;
+}
+
+.frame-24-XxD .frame-27-YAV .button-container-5 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.frame-24-XxD .frame-27-YAV .frame-5-bk2,
+.frame-24-XxD .frame-27-YAV .frame-5-bk3 {
+  width: 25rem;
+  height: 7rem;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 1.2125;
+  color: #ffffff;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  border: solid 0.2rem rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  flex-shrink: 0;
+  background: #ffffff00;
+  border-radius: 10px;
+  border-color: #ffffff;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
