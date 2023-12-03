@@ -3306,3 +3306,15 @@ body {
   margin-left: 20px;
   margin-right: 20px;
 }
+.frame-24-XxD .frame-27-YAV .frame-27-fXX .frame-47-SfX .frame-61-1rM .frame-62-1rM{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  font-size:20px;
+  overflow: hidden;
+  background-color: #ffffff00;
+  border: solid 0.1rem #7f7f7f;
+  color:#ffffff;
+  display:flex;
+  text-align: center;
+}
