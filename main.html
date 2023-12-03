@@ -34,23 +34,6 @@
     
 
 
-    <!-- Video Modal Start -->
-    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>        
-                    <!-- 16:9 aspect ratio -->
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Video Modal End -->
 
     
     <div class="frame-24-XxD">
@@ -70,23 +53,237 @@
  
         
         <div class=e41_2 style="margin-top:20px;">
+          <style>
+            .pressed {
+                background-color: rgb(255, 255, 255); /* 눌린 상태의 배경색 */
+                color: #ffffff; /* 눌린 상태의 글자색 */
+            }
+        </style>
 
-            <a href="index.html" class=e42_123><span  class="e42_125">#태그 1</span></a>
-            <a href="index.html" class=e42_126><span  class="e42_127">#태그 1</span></a>
-            <a href="index.html" class=e42_152><span  class="e42_153">#태그 1</span></a>
-            <a href="index.html" class=e42_154><span  class="e42_155">#태그 1</span></a>
-            <a href="index.html" class=e42_156><span  class="e42_157">#태그 1</span></a>
-            <a href="index.html" class=e42_158><span  class="e42_159">#태그 1</span></a>
-            <a href="index.html" class=e42_168><span  class="e42_169">#태그 1</span></a>
-            <a href="index.html" class=e42_170><span  class="e42_171">#태그 1</span></a>
-            <a href="index.html" class=e42_172><span  class="e42_173">#태그 1</span></a>
-            <a href="index.html" class=e42_174><span  class="e42_175">#태그 1</span></a>
-            <a href="index.html" class=e42_176><span  class="e42_177">#태그 1</span></a>
-            <a href="index.html" class=e42_178><span  class="e42_179">#태그 1</span></a>
-            <a href="index.html" class=e42_180><span  class="e42_181">#태그 1</span></a>
-            <a href="index.html" class=e42_182><span  class="e42_183">#태그 1</span></a>
-            <a href="index.html" class=e42_184><span  class="e42_185">#태그 1</span></a>
-            <a href="index.html" class=e42_186><span  class="e42_187">#태그 1</span></a>
+            <button href="index.html" id="toggleButton1" class=e42_123><span  class="e42_125">#행복</span></button>
+            <script>
+              var button1 = document.getElementById('toggleButton1');
+              var isPressed1 = false;
+          
+              button1.addEventListener('click', function() {
+                  isPressed1 = !isPressed1;
+                  if (isPressed1) {
+                      button1.classList.add('pressed');
+                  } else {
+                      button1.classList.remove('pressed');
+                  }
+              });
+            </script>
+            <button href="index.html" id="toggleButton2" class=e42_126><span  class="e42_127">#해외팝</span></button>
+            <script>
+              var button2 = document.getElementById('toggleButton2');
+              var isPressed2 = false;
+          
+              button2.addEventListener('click', function() {
+                  isPressed2 = !isPressed2;
+                  if (isPressed2) {
+                      button2.classList.add('pressed');
+                  } else {
+                      button2.classList.remove('pressed');
+                  }
+              });
+            </script>
+            <button href="index.html" id="toggleButton3" class=e42_152><span  class="e42_153">#슬픔</span></button>
+            <script>
+              var button3 = document.getElementById('toggleButton3');
+              var isPressed3 = false;
+          
+              button3.addEventListener('click', function() {
+                  isPressed3 = !isPressed3;
+                  if (isPressed3) {
+                      button3.classList.add('pressed');
+                  } else {
+                      button3.classList.remove('pressed');
+                  }
+              });
+            </script>
+            <button href="index.html" id="toggleButton4" class=e42_154><span  class="e42_155">#국내팝</span></button>
+            <script>
+              var button4 = document.getElementById('toggleButton4');
+              var isPressed4 = false;
+          
+              button4.addEventListener('click', function() {
+                  isPressed4 = !isPressed4;
+                  if (isPressed4) {
+                      button4.classList.add('pressed');
+                  } else {
+                      button4.classList.remove('pressed');
+                  }
+              });
+          </script>
+            <button href="index.html" id="toggleButton5" class=e42_156><span  class="e42_157">#분노</span></button>
+            <script>
+              var button5 = document.getElementById('toggleButton5');
+              var isPressed5 = false;
+          
+              button5.addEventListener('click', function() {
+                  isPressed5 = !isPressed5;
+                  if (isPressed5) {
+                      button5.classList.add('pressed');
+                  } else {
+                      button5.classList.remove('pressed');
+                  }
+              });
+          </script>
+            <button href="index.html" id="toggleButton6" class=e42_158><span  class="e42_159">#발라드</span></button>
+            <script>
+              var button6 = document.getElementById('toggleButton6');
+              var isPressed6 = false;
+          
+              button6.addEventListener('click', function() {
+                  isPressed6 = !isPressed6;
+                  if (isPressed6) {
+                      button6.classList.add('pressed');
+                  } else {
+                      button6.classList.remove('pressed');
+                  }
+              });
+          </script>
+            <button href="index.html" id="toggleButton7" class=e42_168><span  class="e42_169">#평온</span></button>
+            <script>
+              var button7 = document.getElementById('toggleButton7');
+              var isPressed7 = false;
+          
+              button7.addEventListener('click', function() {
+                  isPressed7 = !isPressed7;
+                  if (isPressed7) {
+                      button7.classList.add('pressed');
+                  } else {
+                      button7.classList.remove('pressed');
+                  }
+              });
+          </script>
+            <button href="index.html" id="toggleButton8" class=e42_170><span  class="e42_171">#댄스</span></button>
+            <script>
+              var button8 = document.getElementById('toggleButton8');
+              var isPressed8 = false;
+          
+              button8.addEventListener('click', function() {
+                  isPressed8 = !isPressed8;
+                  if (isPressed8) {
+                      button8.classList.add('pressed');
+                  } else {
+                      button8.classList.remove('pressed');
+                  }
+              });
+          </script>
+            <button href="index.html" id="toggleButton9" class=e42_172><span  class="e42_173">#사랑</span></button>
+            <script>
+              var button9 = document.getElementById('toggleButton9');
+              var isPressed9 = false;
+          
+              button9.addEventListener('click', function() {
+                  isPressed9 = !isPressed9;
+                  if (isPressed9) {
+                      button9.classList.add('pressed');
+                  } else {
+                      button9.classList.remove('pressed');
+                  }
+              });
+          </script>
+            <button href="index.html" id="toggleButton10" class=e42_174><span  class="e42_175">#록</span></button>
+            <script>
+              var button10 = document.getElementById('toggleButton10');
+              var isPressed10 = false;
+          
+              button10.addEventListener('click', function() {
+                  isPressed10 = !isPressed10;
+                  if (isPressed10) {
+                      button10.classList.add('pressed');
+                  } else {
+                      button10.classList.remove('pressed');
+                  }
+              });
+          </script>
+            <button href="index.html" id="toggleButton11" class=e42_176><span  class="e42_177">#감동</span></button>
+            <script>
+              var button11= document.getElementById('toggleButton11');
+              var isPressed11 = false;
+          
+              button11.addEventListener('click', function() {
+                  isPressed11 = !isPressed11;
+                  if (isPressed11) {
+                      button11.classList.add('pressed');
+                  } else {
+                      button11.classList.remove('pressed');
+                  }
+              });
+          </script>
+            <button href="index.html" id="toggleButton12" class=e42_178><span  class="e42_179">#재즈</span></button>
+            <script>
+              var button12 = document.getElementById('toggleButton12');
+              var isPressed12 = false;
+          
+              button12.addEventListener('click', function() {
+                  isPressed12 = !isPressed12;
+                  if (isPressed12) {
+                      button12.classList.add('pressed');
+                  } else {
+                      button12.classList.remove('pressed');
+                  }
+              });
+          </script>
+            <button href="index.html" id="toggleButton13" class=e42_180><span  class="e42_181">#신나는</span></button>
+            <script>
+              var button13 = document.getElementById('toggleButton13');
+              var isPressed13 = false;
+          
+              button13.addEventListener('click', function() {
+                  isPressed13 = !isPressed13;
+                  if (isPressed13) {
+                      button13.classList.add('pressed');
+                  } else {
+                      button13.classList.remove('pressed');
+                  }
+              });
+          </script>
+            <button href="index.html" id="toggleButton14" class=e42_182><span  class="e42_183">#클래식</span></button>
+            <script>
+              var button14 = document.getElementById('toggleButton14');
+              var isPressed14 = false;
+          
+              button14.addEventListener('click', function() {
+                  isPressed14 = !isPressed14;
+                  if (isPressed14) {
+                      button14.classList.add('pressed');
+                  } else {
+                      button14.classList.remove('pressed');
+                  }
+              });
+          </script>
+            <button href="index.html" id="toggleButton15" class=e42_184><span  class="e42_185">#위로</span></button>
+            <script>
+              var button15 = document.getElementById('toggleButton15');
+              var isPressed15 = false;
+          
+              button15.addEventListener('click', function() {
+                  isPressed15 = !isPressed15;
+                  if (isPressed15) {
+                      button15.classList.add('pressed');
+                  } else {
+                      button15.classList.remove('pressed');
+                  }
+              });
+          </script>
+            <button href="index.html" id="toggleButton16" class=e42_186><span  class="e42_187">#힙합</span></button>
+            <script>
+              var button16 = document.getElementById('toggleButton16');
+              var isPressed16 = false;
+          
+              button16.addEventListener('click', function() {
+                  isPressed16 = !isPressed16;
+                  if (isPressed16) {
+                      button16.classList.add('pressed');
+                  } else {
+                      button16.classList.remove('pressed');
+                  }
+              });
+          </script>
 
         </div>
         <div class="frame-25-NFB">
