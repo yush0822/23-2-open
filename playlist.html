@@ -52,9 +52,27 @@
         <script>
           // 이전 페이지로 이동하는 함수
           function goBack() {
-              window.history.back();
+            // 현재 페이지의 URL을 가져옵니다.
+            var currentUrl = window.location.href;
+        
+            // 이전 페이지로 이동
+            window.history.back();
+        
+            // 이전 페이지의 URL을 가져옵니다.
+            var previousUrl = document.referrer;
+        
+            // 이전 URL이 "songcreat.html"이면 두 페이지 전으로 이동
+            if (previousUrl.includes("songcreat.html")) {
+              window.history.go(-2);
+            }
           }
-      </script>
+        </script>
+
+        <div style="width: 50px;height:50px;position:fixed;top:5%;left:300px;justify-content:center;">
+          <a href="songcreat.html" class="frame-4-yBw" style="width: 50px;; height:50px; border-radius: 5rem; background-color:#525252;bottom:40%;">
+            <img src="img/+.png" style="width: 50px; height: 50px;border-radius: 5rem;border: solid 0.5rem rgb(255, 255, 255);">
+          </a>
+        </div>
 
 
         <div class="frame-27-JVK"style="height: 80%; width: 40%; top: 0%; left: 22%; position:relative;">
@@ -99,108 +117,82 @@
               </div>
               
               
-                <div class="frame-47-e3P" style="height: 100%;overflow: auto;">
+                <div class="frame-47-e3P" style="overflow: scroll;">
                   <div class="frame-53-qdf">
-                    <a href="profile.html" class="frame-58-zWZ">
-                      <span class="frame-58-zWZ-sub-0"> </span>
-                      <span class="frame-58-zWZ-sub-1"> 노래1</span>
+                    
+                    
+                    <a href="profile.html" class="frame-58-zWZ" style="padding:0rem;display:flex;align-items:center;">
+                      <div style="width:100%;height:100%;display:flex;flex-direction: row;">
+                        <div style="width:20%;height:100%;display:flex;align-items:center;">
+                          <img src="img/music.png" style="margin-left:10%;width: 80%; height: 80%;object-fit: contain;border-radius: 1rem;border: solid 0.2rem rgb(255, 255, 255);">
+                        </div>
+                        <div style="width: 80%;height:100%;display:flex;flex-direction: column;">
+                          <span class="frame-58-zWZ-sub-1" style="width:100%;height:50%;font-size:16px;display: flex; align-items: center;color:#fff"> 노래제목</span>
+                          <span class="frame-58-zWZ-sub-1" style="width:100%;height:50%;font-size:14px;display: flex; align-items: center;color:#fff"> 가수</span>
+                        </div>
+                      </div>
                     </a>
-                    <a href="profile.html" class="frame-57-5Zw">
-                      <span class="frame-57-5Zw-sub-0"> </span>
-                      <span class="frame-57-5Zw-sub-1"> 노래2</span>
+
+                    <a href="profile.html" class="frame-58-zWZ" style="padding:0rem;display:flex;align-items:center;">
+                      <div style="width:100%;height:100%;display:flex;flex-direction: row;">
+                        <div style="width:20%;height:100%;display:flex;align-items:center;">
+                          <img src="img/music.png" style="margin-left:10%;width: 80%; height: 80%;object-fit: contain;border-radius: 1rem;border: solid 0.2rem rgb(255, 255, 255);">
+                        </div>
+                        <div style="width: 80%;height:100%;display:flex;flex-direction: column;">
+                          <span class="frame-58-zWZ-sub-1" style="width:100%;height:50%;font-size:16px;display: flex; align-items: center;color:#fff"> 노래제목</span>
+                          <span class="frame-58-zWZ-sub-1" style="width:100%;height:50%;font-size:14px;display: flex; align-items: center;color:#fff"> 가수</span>
+                        </div>
+                      </div>
                     </a>
-                    <a href="profile.html" class="frame-57-5Zw">
-                        <span class="frame-57-5Zw-sub-0"> </span>
-                        <span class="frame-57-5Zw-sub-1"> 스크롤 테스트를 위한 더미</span>
-                      </a>
-                      <a href="profile.html" class="frame-57-5Zw">
-                        <span class="frame-57-5Zw-sub-0"> </span>
-                        <span class="frame-57-5Zw-sub-1"> 노래2</span>
-                      </a>
-                      <a href="profile.html" class="frame-57-5Zw">
-                        <span class="frame-57-5Zw-sub-0"> </span>
-                        <span class="frame-57-5Zw-sub-1"> 노래2</span>
-                      </a>
-                      <a href="profile.html" class="frame-57-5Zw">
-                        <span class="frame-57-5Zw-sub-0"> </span>
-                        <span class="frame-57-5Zw-sub-1"> 노래2</span>
-                      </a>
-                      <a href="profile.html" class="frame-57-5Zw">
-                        <span class="frame-57-5Zw-sub-0"> </span>
-                        <span class="frame-57-5Zw-sub-1"> 노래2</span>
-                      </a>
-                      <a href="profile.html" class="frame-57-5Zw">
-                        <span class="frame-57-5Zw-sub-0"> </span>
-                        <span class="frame-57-5Zw-sub-1"> 노래2</span>
-                      </a>
-                      <a href="profile.html" class="frame-57-5Zw">
-                        <span class="frame-57-5Zw-sub-0"> </span>
-                        <span class="frame-57-5Zw-sub-1"> 노래2</span>
-                      </a>
-                      <a href="profile.html" class="frame-57-5Zw">
-                        <span class="frame-57-5Zw-sub-0"> </span>
-                        <span class="frame-57-5Zw-sub-1"> 노래2</span>
-                      </a>
-                      <a href="profile.html" class="frame-57-5Zw">
-                        <span class="frame-57-5Zw-sub-0"> </span>
-                        <span class="frame-57-5Zw-sub-1"> 노래2</span>
-                      </a>
-                      <a href="profile.html" class="frame-57-5Zw">
-                        <span class="frame-57-5Zw-sub-0"> </span>
-                        <span class="frame-57-5Zw-sub-1"> 노래2</span>
-                      </a>
-                      <a href="profile.html" class="frame-57-5Zw">
-                        <span class="frame-57-5Zw-sub-0"> </span>
-                        <span class="frame-57-5Zw-sub-1"> 노래2</span>
-                      </a>
-                      <a href="profile.html" class="frame-57-5Zw">
-                        <span class="frame-57-5Zw-sub-0"> </span>
-                        <span class="frame-57-5Zw-sub-1"> 노래2</span>
-                      </a>
-                      <a href="profile.html" class="frame-57-5Zw">
-                        <span class="frame-57-5Zw-sub-0"> </span>
-                        <span class="frame-57-5Zw-sub-1"> 노래2</span>
-                      </a>
-                      <a href="profile.html" class="frame-57-5Zw">
-                        <span class="frame-57-5Zw-sub-0"> </span>
-                        <span class="frame-57-5Zw-sub-1"> 노래2</span>
-                      </a>
-                      <a href="profile.html" class="frame-57-5Zw">
-                        <span class="frame-57-5Zw-sub-0"> </span>
-                        <span class="frame-57-5Zw-sub-1"> 노래2</span>
-                      </a>
-                      <a href="profile.html" class="frame-57-5Zw">
-                        <span class="frame-57-5Zw-sub-0"> </span>
-                        <span class="frame-57-5Zw-sub-1"> 노래2</span>
-                      </a>
-                      <a href="profile.html" class="frame-57-5Zw">
-                        <span class="frame-57-5Zw-sub-0"> </span>
-                        <span class="frame-57-5Zw-sub-1"> 노래2</span>
-                      </a>                <a href="profile.html" class="frame-57-5Zw">
-                        <span class="frame-57-5Zw-sub-0"> </span>
-                        <span class="frame-57-5Zw-sub-1"> 노래2</span>
-                      </a>
-                      <a href="profile.html" class="frame-57-5Zw">
-                        <span class="frame-57-5Zw-sub-0"> </span>
-                        <span class="frame-57-5Zw-sub-1"> 노래2</span>
-                      </a>
-                      <a href="profile.html" class="frame-57-5Zw">
-                        <span class="frame-57-5Zw-sub-0"> </span>
-                        <span class="frame-57-5Zw-sub-1"> 노래2</span>
-                      </a>                <a href="profile.html" class="frame-57-5Zw">
-                        <span class="frame-57-5Zw-sub-0"> </span>
-                        <span class="frame-57-5Zw-sub-1"> 노래2</span>
-                      </a>
-                      <a href="profile.html" class="frame-57-5Zw">
-                        <span class="frame-57-5Zw-sub-0"> </span>
-                        <span class="frame-57-5Zw-sub-1"> 노래2</span>
-                      </a>
-                      <a href="profile.html" class="frame-57-5Zw">
-                        <span class="frame-57-5Zw-sub-0"> </span>
-                        <span class="frame-57-5Zw-sub-1"> 노래2</span>
-                      </a>
-    
-    
+
+                    <a href="profile.html" class="frame-58-zWZ" style="padding:0rem;display:flex;align-items:center;">
+                      <div style="width:100%;height:100%;display:flex;flex-direction: row;">
+                        <div style="width:20%;height:100%;display:flex;align-items:center;">
+                          <img src="img/music.png" style="margin-left:10%;width: 80%; height: 80%;object-fit: contain;border-radius: 1rem;border: solid 0.2rem rgb(255, 255, 255);">
+                        </div>
+                        <div style="width: 80%;height:100%;display:flex;flex-direction: column;">
+                          <span class="frame-58-zWZ-sub-1" style="width:100%;height:50%;font-size:16px;display: flex; align-items: center;color:#fff"> 노래제목</span>
+                          <span class="frame-58-zWZ-sub-1" style="width:100%;height:50%;font-size:14px;display: flex; align-items: center;color:#fff"> 가수</span>
+                        </div>
+                      </div>
+                    </a>
+
+                    <a href="profile.html" class="frame-58-zWZ" style="padding:0rem;display:flex;align-items:center;">
+                      <div style="width:100%;height:100%;display:flex;flex-direction: row;">
+                        <div style="width:20%;height:100%;display:flex;align-items:center;">
+                          <img src="img/music.png" style="margin-left:10%;width: 80%; height: 80%;object-fit: contain;border-radius: 1rem;border: solid 0.2rem rgb(255, 255, 255);">
+                        </div>
+                        <div style="width: 80%;height:100%;display:flex;flex-direction: column;">
+                          <span class="frame-58-zWZ-sub-1" style="width:100%;height:50%;font-size:16px;display: flex; align-items: center;color:#fff"> 노래제목</span>
+                          <span class="frame-58-zWZ-sub-1" style="width:100%;height:50%;font-size:14px;display: flex; align-items: center;color:#fff"> 가수</span>
+                        </div>
+                      </div>
+                    </a>
+
+                    <a href="profile.html" class="frame-58-zWZ" style="padding:0rem;display:flex;align-items:center;">
+                      <div style="width:100%;height:100%;display:flex;flex-direction: row;">
+                        <div style="width:20%;height:100%;display:flex;align-items:center;">
+                          <img src="img/music.png" style="margin-left:10%;width: 80%; height: 80%;object-fit: contain;border-radius: 1rem;border: solid 0.2rem rgb(255, 255, 255);">
+                        </div>
+                        <div style="width: 80%;height:100%;display:flex;flex-direction: column;">
+                          <span class="frame-58-zWZ-sub-1" style="width:100%;height:50%;font-size:16px;display: flex; align-items: center;color:#fff"> 노래제목</span>
+                          <span class="frame-58-zWZ-sub-1" style="width:100%;height:50%;font-size:14px;display: flex; align-items: center;color:#fff"> 가수</span>
+                        </div>
+                      </div>
+                    </a>
+
+                    <a href="profile.html" class="frame-58-zWZ" style="padding:0rem;display:flex;align-items:center;">
+                      <div style="width:100%;height:100%;display:flex;flex-direction: row;">
+                        <div style="width:20%;height:100%;display:flex;align-items:center;">
+                          <img src="img/music.png" style="margin-left:10%;width: 80%; height: 80%;object-fit: contain;border-radius: 1rem;border: solid 0.2rem rgb(255, 255, 255);">
+                        </div>
+                        <div style="width: 80%;height:100%;display:flex;flex-direction: column;">
+                          <span class="frame-58-zWZ-sub-1" style="width:100%;height:50%;font-size:16px;display: flex; align-items: center;color:#fff"> 노래제목</span>
+                          <span class="frame-58-zWZ-sub-1" style="width:100%;height:50%;font-size:14px;display: flex; align-items: center;color:#fff"> 가수</span>
+                        </div>
+                      </div>
+                    </a>
+
                   </div>
                 </div>
     
@@ -213,10 +205,13 @@
                 <button href="main.html" id="toggleButton2" style="height:65%;width:20%;background-color:#525252;color:#ffffff;"><span>취 소</span></button>
 
               </div>
+
               
 
           </div>
 
+
+          
           <!-- 모달 -->
           <div id="myModal" style="display: none; position: fixed; top: 0; left: 0%; 
           width: 100%; height: 100%;
@@ -238,73 +233,70 @@
 
                     <div class="frame-47-e3P" style="height: 50%;">
                       <div class="frame-53-qdf" >
-                        <a href="profile.html" class="frame-58-zWZ">
-                          <span class="frame-58-zWZ-sub-0"> </span>
-                          <span class="frame-58-zWZ-sub-1" style="font-size:15px;"> 노래1</span>
-                        </a>
+
+
                         <a href="profile.html" class="frame-57-5Zw">
-                          <span class="frame-57-5Zw-sub-0"> </span>
-                          <span class="frame-57-5Zw-sub-1" style="font-size:16px;"> 노래2</span>
+                          <span class="frame-57-5Zw-sub-1" style="font-size:16px;"> 친구이름</span>
                         </a>
                         <a href="profile.html" class="frame-57-5Zw">
                             <span class="frame-57-5Zw-sub-0"> </span>
-                            <span class="frame-57-5Zw-sub-1" style="font-size:16px;"> 스크롤 테스트를 위한 더미</span>
+                            <span class="frame-57-5Zw-sub-1" style="font-size:16px;"> 테스트 더미</span>
                           </a>
                           <a href="profile.html" class="frame-57-5Zw">
                             <span class="frame-57-5Zw-sub-0"> </span>
-                            <span class="frame-57-5Zw-sub-1" style="font-size:16px;"> 노래2</span>
+                            <span class="frame-57-5Zw-sub-1" style="font-size:16px;"> 친구이름</span>
                           </a>
                           <a href="profile.html" class="frame-57-5Zw">
                             <span class="frame-57-5Zw-sub-0"> </span>
-                            <span class="frame-57-5Zw-sub-1" style="font-size:16px;"> 노래2</span>
+                            <span class="frame-57-5Zw-sub-1" style="font-size:16px;"> 친구이름</span>
                           </a>
                           <a href="profile.html" class="frame-57-5Zw">
                             <span class="frame-57-5Zw-sub-0"> </span>
-                            <span class="frame-57-5Zw-sub-1" style="font-size:16px;"> 노래2</span>
+                            <span class="frame-57-5Zw-sub-1" style="font-size:16px;"> 친구이름</span>
                           </a>
                           <a href="profile.html" class="frame-57-5Zw">
                             <span class="frame-57-5Zw-sub-0"> </span>
-                            <span class="frame-57-5Zw-sub-1" style="font-size:16px;"> 노래2</span>
+                            <span class="frame-57-5Zw-sub-1" style="font-size:16px;"> 친구이름</span>
                           </a>
                           <a href="profile.html" class="frame-57-5Zw">
                             <span class="frame-57-5Zw-sub-0"> </span>
-                            <span class="frame-57-5Zw-sub-1" style="font-size:16px;"> 노래2</span>
+                            <span class="frame-57-5Zw-sub-1" style="font-size:16px;"> 친구이름</span>
                           </a>
                           <a href="profile.html" class="frame-57-5Zw">
                             <span class="frame-57-5Zw-sub-0"> </span>
-                            <span class="frame-57-5Zw-sub-1" style="font-size:16px;"> 노래2</span>
+                            <span class="frame-57-5Zw-sub-1" style="font-size:16px;"> 친구이름</span>
                           </a>
                           <a href="profile.html" class="frame-57-5Zw">
                             <span class="frame-57-5Zw-sub-0"> </span>
-                            <span class="frame-57-5Zw-sub-1" style="font-size:16px;"> 노래2</span>
+                            <span class="frame-57-5Zw-sub-1" style="font-size:16px;"> 친구이름</span>
                           </a>
                           <a href="profile.html" class="frame-57-5Zw">
                             <span class="frame-57-5Zw-sub-0"> </span>
-                            <span class="frame-57-5Zw-sub-1" style="font-size:16px;"> 노래2</span>
+                            <span class="frame-57-5Zw-sub-1" style="font-size:16px;"> 친구이름</span>
                           </a>
                           <a href="profile.html" class="frame-57-5Zw">
                             <span class="frame-57-5Zw-sub-0"> </span>
-                            <span class="frame-57-5Zw-sub-1" style="font-size:16px;"> 노래2</span>
+                            <span class="frame-57-5Zw-sub-1" style="font-size:16px;"> 친구이름</span>
                           </a>
                           <a href="profile.html" class="frame-57-5Zw">
                             <span class="frame-57-5Zw-sub-0"> </span>
-                            <span class="frame-57-5Zw-sub-1" style="font-size:16px;"> 노래2</span>
+                            <span class="frame-57-5Zw-sub-1" style="font-size:16px;"> 친구이름</span>
                           </a>
                           <a href="profile.html" class="frame-57-5Zw">
                             <span class="frame-57-5Zw-sub-0"> </span>
-                            <span class="frame-57-5Zw-sub-1" style="font-size:16px;"> 노래2</span>
+                            <span class="frame-57-5Zw-sub-1" style="font-size:16px;"> 친구이름</span>
                           </a>
                           <a href="profile.html" class="frame-57-5Zw">
                             <span class="frame-57-5Zw-sub-0"> </span>
-                            <span class="frame-57-5Zw-sub-1" style="font-size:16px;"> 노래2</span>
+                            <span class="frame-57-5Zw-sub-1" style="font-size:16px;"> 친구이름</span>
                           </a>
                           <a href="profile.html" class="frame-57-5Zw">
                             <span class="frame-57-5Zw-sub-0"> </span>
-                            <span class="frame-57-5Zw-sub-1" style="font-size:16px;"> 노래2</span>
+                            <span class="frame-57-5Zw-sub-1" style="font-size:16px;"> 친구이름</span>
                           </a>
                           <a href="profile.html" class="frame-57-5Zw">
                             <span class="frame-57-5Zw-sub-0"> </span>
-                            <span class="frame-57-5Zw-sub-1" style="font-size:16px;"> 노래2</span>
+                            <span class="frame-57-5Zw-sub-1" style="font-size:16px;"> 친구이름</span>
                           </a>
                           
         
@@ -317,6 +309,8 @@
               </div>
           </div>
       </div>
+
+
       
 
 </div>

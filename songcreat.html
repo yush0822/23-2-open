@@ -102,16 +102,21 @@
               
 
               <div class="frame-60-ZRF" style="color: #ffffff;align-items:center;height:12%;display:flex;flex-direction: row;">
-                <button href="main.html" id="toggleButton2" style="margin-right: 20%;height:65%;width:20%;background-color:#525252;color:#ffffff"><span>저 장</span></button>
-                <button href="main.html" id="toggleButton2" style="height:65%;width:20%;background-color:#525252;color:#ffffff;"><span>취 소</span></button>
+                <button onclick="goBack()" href="main.html" id="toggleButton2" style="margin-right: 20%;height:65%;width:20%;background-color:#525252;color:#ffffff"><span>저 장</span></button>
+                <button onclick="goBack()" href="main.html" id="toggleButton2" style="height:65%;width:20%;background-color:#525252;color:#ffffff;"><span>취 소</span></button>
 
               </div>
-              
+              <script>
+                // 이전 페이지로 이동하는 함수
+                function goBack() {
+                    window.history.back();
+                }
+              </script>
 
           </div>
       </div>
       
-
+      
 </div>
     
 
