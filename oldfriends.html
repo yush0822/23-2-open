@@ -43,7 +43,8 @@
         </div>
         <a href="main.html" class="frame-5-bz1">홈</a>
         <a href="friends.html" class="frame-6-tiD">친구</a>
-        <a href="profile.html" div class="frame-6-f6h">프로필</a>
+        <a th:href="@{/main/user/update/{userid}(userid=${#authentication.name})}" class="frame-6-f6h">
+프로필</a>
         </div>
         <div class="frame-27-JVK">
             <div class="frame-47-e3P" style="height:50%; border: solid 0.3rem #ffffff;">
