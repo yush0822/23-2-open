@@ -214,10 +214,25 @@
                   </div>
                   <div style="width:98%;height:85%;flex-direction:colum;display:flex;overflow:auto">
                     <input type="text" name="" id="username-field" class="frame-69-zc5" placeholder="검색어" style="border: solid 0.1rem #000000;height:35%;margin-left:5%; width:70%;margin-top: 30px;font-size:16px;display:flex">
-                    <button  class="frame-4-yBw" style=" width:50px; height:50px; background-color:#525252; margin-top: 30px;margin-left: 5px;width:20%;height:35%;margin-left:5%;font-size:16px;">
+                    <button  onclick="searchfriend()" class="frame-4-yBw" style=" width:50px; height:50px; background-color:#525252; margin-top: 30px;margin-left: 5px;width:20%;height:35%;margin-left:5%;font-size:16px;">
                       확인
                     </button>
-
+                    <script>
+                      function searchfriend() {
+                        // 입력값 가져오기
+                        var username = document.getElementById('username-field').value;
+                    
+                        // 입력값이 비어있는지 확인
+                        if (username.trim() === "") {
+                          alert("검색어를 입력하세요.");
+                          return;
+                        }
+                    
+                        // 페이지 이동
+                        var destinationPage = 'profile.' + encodeURIComponent(username) + '.html';
+                        window.location.href = destinationPage;
+                      }
+                    </script>
                   </div>
                   
               </div>

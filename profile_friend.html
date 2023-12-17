@@ -63,31 +63,29 @@
         <img class="frame-8-7jK" src="./assets/frame-3.png"/>
         <div class="frame-62-SWh">
           <div style="width:80%;height:80%;display: flex;text-align:center;align-items:center;">
-            <!-- 모달 버튼 -->
-            <button onclick="openModal()" style="width:100%;height:100%;background-color: #525252;color:#fff;">아이콘 변경</button>
+            
+            <button onclick="toggleFollow()" id="followButton" style="width:100%;height:100%;background-color: #525252;color:#fff;">팔로우</button>
 
             <script>
-              // 모달 열기
-              function openModal() {
-                var modal = document.getElementById('myModal');
-                modal.style.display = 'flex';
-                document.body.style.overflow = 'hidden'; // 스크롤 방지
-              }
+              function toggleFollow() {
+                var followButton = document.getElementById('followButton');
 
-              // 모달 닫기
-              function closeModal() {
-                var modal = document.getElementById('myModal');
-                modal.style.display = 'none';
-                document.body.style.overflow = 'auto'; // 스크롤 다시 허용
-              }
-
-              // 백드롭 클릭 방지
-              document.getElementById('myModal').addEventListener('click', function (event) {
-                if (event.target === this) {
-                  closeModal(); // 모달 백드롭 클릭 시 모달 닫기
+                // 현재 버튼의 텍스트를 확인하여 상태를 변경
+                if (followButton.innerHTML === '팔로우') {
+                  followButton.innerHTML = '팔로잉';
+                  followButton.style.backgroundColor = 'transparent';
+                  followButton.style.color = '#000'; // 팔로잉 중이면 투명으로 변경
+                  // 팔로우 버튼을 눌렀을 때 수행할 추가 작업을 여기에 추가할 수 있습니다.
+                } else {
+                  followButton.innerHTML = '팔로우';
+                  followButton.style.backgroundColor = '#525252';
+                  followButton.style.color = '#fff'; // 팔로우 중이면 기본 색상으로 변경
+                  // 언팔로우 버튼을 눌렀을 때 수행할 추가 작업을 여기에 추가할 수 있습니다.
                 }
-              });
+              }
             </script>
+
+            
           </div>
   </div>
 
@@ -213,70 +211,7 @@
     </div>
 
         
-        
-
-          <!-- 모달 -->
-          <div id="myModal" style="display: none; position: fixed; top: 0; left: 0%; 
-          width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); justify-content: center; align-items: center; pointer-events: none;">
-        <!-- 모달 내용 -->
-        <div style="width:40%;height:50%;background-color: #fff; padding: 0.5%; border-radius: 5px; left:0%;position: relative; pointer-events: auto; ">
-          <div style="width:100%;height:10%;flex-direction:row;display:flex">
-            <div style="width: 100%;height:100%;">
-              <p style="width:100%;height:100%;color:black;font-size:4rem;text-align:center; font-style:blond;margin-top:2%;">
-                아이콘 변경
-              </p>
-            </div>
-            <div style="width: 5%;height:100%;">
-              <span style="width:100%;height:100%; cursor: pointer;color:black;font-size:3rem;" onclick="closeModal()">&times;</span>
-            </div>
-          </div>
-          <div style="width:100%;height:90%;flex-direction:column;display:flex;overflow:auto">
-            
-              
-                <!-- 모달 내용 추가 -->
-                <div class="frame-62-SWh" style="width: 100%;height:100%;align-items: center;flex-direction:column;display:flex;">
-                  <div style="width: 100%;height:60%;align-items: center;flex-direction:row;display:flex;">
-                    <div style="width: 45%;height:100%;align-items: center;flex-direction:row;display:flex;">
-                      <img id="currentIcon" src="img/about.jpg" alt="현재 아이콘" style="width: 90%;height:90%;margin-left:5%;border: solid 0.1rem rgb(0, 0, 0);">
-                    </div>
-                    <div style="width: 10%;height:100%;align-items: center;flex-direction:row;display:flex;">
-                      <img id="currentIcon" src="./img/next.png" alt="현재 아이콘" style="width: 100%;height:20%">
-                    </div>
-                    <div style="width: 45%;height:100%;align-items: center;flex-direction:row;display:flex;">
-                      <img id="currentIcon" src="img/about.jpg" alt="미래 아이콘" style="width: 90%;height:90%;margin-left:5%;border: solid 0.1rem rgb(0, 0, 0);">
-                    </div>
-                    
-
-                  </div>
-                  <div style="width: 100%;height:40%;">
-                    <form action="/main/user/update/profileImage" method="post" enctype="multipart/form-data" style="width: 100%;height:100%;align-items: center;flex-direction:row;display:flex;">
-                      <div style="width: 45%;height:100%;align-items: center;flex-direction:row;display:flex;">
-                        <div style="width: 50%; height: 50%; display: flex; align-items: center; justify-content: center;margin-left:25%;">
-                          <label style="width: 100%; height: 100%;background-color:rgb(236, 236, 236);display: flex; align-items: center; justify-content: center;color:black;font-size:3rem;border: solid 0.1rem rgb(0, 0, 0);">파일 선택
-                            <input type="file" id="profileIcon" name="filename" accept="image/*" style="width: 100%; height: 100%; display: none;">
-                          </label>
-                          
-                        </div>
-                      </div>
-
-                      <div style="width: 10%;height:100%;align-items: center;;display:flex; justify-content: center;">
-                        
-                      </div>
-                      
-                      <div style="width: 45%;height:100%;align-items: center;;display:flex; justify-content: center; ">
-                        <button type="submit" style="width: 50%; height: 50%; display: flex; align-items: center; justify-content: center; font-size: 3rem; text-align: center;">
-                          아이콘 변경
-                        </button>
-                      </div>
-                      
-                    </form>
-                  </div>
-
-                </div>
-              
-          </div>
-        </div>
-        </div>
+    
 
       </div>
     </div>
