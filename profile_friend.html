@@ -102,21 +102,21 @@
           <div class="auto-group-6mtk-VG1" id="my_playlist"></div>
           <script>
             const myPlaylists = [
-            { title: "플리제목 1", img:"./assets/frame-4.png"},
-            { title: "플리제목 2", img:""},
-            { title: "플리제목 3", img:""},
-            { title: "플리제목 4", img:""},
-            { title: "플리제목 5", img:""},
-            { title: "플리제목 6", img:""},
-            { title: "플리제목 7", img:""},
-            { title: "플리제목 8", img:""}
+            { title: "플리제목 1", img:"./assets/frame-4.png", address:'' },
+            { title: "플리제목 2", img:"", address:'' },
+            { title: "플리제목 3", img:"", address:'' },
+            { title: "플리제목 4", img:"", address:'' },
+            { title: "플리제목 5", img:"", address:'' },
+            { title: "플리제목 6", img:"", address:'' },
+            { title: "플리제목 7", img:"", address:'' },
+            { title: "플리제목 8", img:"", address:'' }
           ];
           const my_Playlist = document.getElementById("my_playlist");
 
-          myPlaylists.forEach(({ title, img }) => {
+          myPlaylists.forEach(({ title, img, address }) => {
             const myPlaylistHtml = `
-            <a href="playlist.html" class="frame-16-DSu">
-              <div class="frame-17-Nah" style="background-image:url(${img});">
+            <a href="playlist.${address}.html" class="frame-16-DSu">
+              <div class="frame-17-Nah" style="object-Fit:cover;background-image:url(${img});">
               </div>
               <div class="frame-18-845" style="height:20%;margin-top:15px">
                 <div class="frame-19-Ts3">${title}</div>
@@ -142,24 +142,25 @@
 
           <script>
             const publicPlaylists = [
-            { title: "플리제목 1", img:"./assets/frame-4.png"},
-            { title: "플리제목 2", img:""},
-            { title: "플리제목 3", img:""},
-            { title: "플리제목 4", img:""},
-            { title: "플리제목 5", img:""},
-            { title: "플리제목 6", img:""},
-            { title: "플리제목 7", img:""},
-            { title: "플리제목 8", img:""}
+            { title: "플리제목 1", friendName: "친구이름 1", img:"./assets/frame-4.png", address: "" },
+            { title: "플리제목 2", friendName: "친구이름 1", img:"", address: "" },
+            { title: "플리제목 3", friendName: "친구이름 1", img:"", address: "" },
+            { title: "플리제목 4", friendName: "친구이름 1", img:"", address: "" },
+            { title: "플리제목 5", friendName: "친구이름 1", img:"", address: "" },
+            { title: "플리제목 6", friendName: "친구이름 1", img:"", address: "" },
+            { title: "플리제목 7", friendName: "친구이름 1", img:"", address: "" },
+            { title: "플리제목 8", friendName: "친구이름 1", img:"", address: "" }
           ];
           const public_Playlist = document.getElementById("public_playlist");
 
-          publicPlaylists.forEach(({ title, img }) => {
+          publicPlaylists.forEach(({ title, friendName, img, address }) => {
             const publicPlaylistHtml = `
-            <a href="playlist.html" class="frame-16-iaZ">
-              <div class="frame-17-5R7" style="background-image:url(${img});">
+            <a href="playlist.${address}.html" class="frame-16-iaZ">
+              <div class="frame-17-5R7" style="object-Fit:cover;background-image:url(${img});">
               </div>
               <div class="frame-18-dSd" style="height:20%;margin-top:15px">
-                <div class="frame-19-yFb" style="height:100%;text-align:center">${title}</div>
+                <div class="frame-19-yFb" style="height:100%;text-align:center;margin-bottom:0%">${title}</div>
+                <div class="frame-19-yFb" style="height:100%;text-align:center;margin-bottom:0%">${friendName}</div>
               </div>
             </a>
             `;

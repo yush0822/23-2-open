@@ -361,27 +361,27 @@
         <script>
           // Sample data for my playlists
           const myPlaylists = [
-            { title: "노래제목 1", artist: "가수이름 1" },
-            { title: "노래제목 2", artist: "가수이름 2" },
-            { title: "노래제목 3", artist: "가수이름 3" },
-            { title: "노래제목 4", artist: "가수이름 4" },
-            { title: "노래제목 5", artist: "가수이름 5" },
-            { title: "노래제목 6", artist: "가수이름 6" },
-            { title: "노래제목 7", artist: "가수이름 7" },
-            { title: "노래제목 8", artist: "가수이름 8" }
+            { title: "플리제목 1", img: "img/+.png", address:'' },
+            { title: "플리제목 2", img: "", address:'' },
+            { title: "플리제목 3", img: "", address:'' },
+            { title: "플리제목 4", img: "", address:'' },
+            { title: "플리제목 5", img: "", address:'' },
+            { title: "플리제목 6", img: "", address:'' },
+            { title: "플리제목 7", img: "", address:'' },
+            { title: "노래제목 8", img: "", address:'' }
           ];
         
           // Get the my playlist container
           const myPlaylistContainer = document.getElementById("myPlaylistContainer");
         
           // Loop through my playlists and generate HTML
-          myPlaylists.forEach(({ title, artist }) => {
+          myPlaylists.forEach(({ title, img, address }) => {
             const myPlaylistHtml = `
-              <a href="playlist.html" class="frame-16-tFT">
-                <div class="frame-17-SXs"></div>
+              <a href="playlist.${address}.html" class="frame-16-tFT">
+                <div class="frame-17-SXs" style="background-image:url(${img});"></div>
                 <div class="frame-18-C1F">
                   <div class="frame-19-XZK">${title}</div>
-                  <div class="frame-20-Rub">${artist}</div>
+                  <div class="frame-20-Rub"></div>
                 </div>
               </a>
             `;
@@ -404,24 +404,24 @@
           <script>
             // Sample data for friend playlists
             const friendPlaylists = [
-              { title: "플리제목 1", friendName: "친구이름 1" },
-              { title: "플리제목 2", friendName: "친구이름 2" },
-              { title: "플리제목 3", friendName: "친구이름 3" },
-              { title: "플리제목 4", friendName: "친구이름 4" },
-              { title: "플리제목 5", friendName: "친구이름 5" },
-              { title: "플리제목 6", friendName: "친구이름 6" },
-              { title: "플리제목 7", friendName: "친구이름 7" },
-              { title: "플리제목 8", friendName: "친구이름 8" }
+              { title: "플리제목 1", friendName: "친구이름 1", img: "", address: "" },
+              { title: "플리제목 2", friendName: "친구이름 2", img: "", address: "" },
+              { title: "플리제목 3", friendName: "친구이름 3", img: "", address: "" },
+              { title: "플리제목 4", friendName: "친구이름 4", img: "", address: "" },
+              { title: "플리제목 5", friendName: "친구이름 5", img: "", address: "" },
+              { title: "플리제목 6", friendName: "친구이름 6", img: "", address: "" },
+              { title: "플리제목 7", friendName: "친구이름 7", img: "", address: "" },
+              { title: "플리제목 8", friendName: "친구이름 8", img: "", address: "" }
             ];
           
             // Get the friend playlist container
             const friendPlaylistContainer = document.getElementById("friendPlaylistContainer");
           
             // Loop through friend playlists and generate HTML
-            friendPlaylists.forEach(({ title, friendName }) => {
+            friendPlaylists.forEach(({ title, friendName, img, address }) => {
               const friendPlaylistHtml = `
-                <a href="playlist.html" class="frame-16-NVw">
-                  <div class="frame-17-8V7"></div>
+                <a href="playlist.${address}.html" class="frame-16-NVw">
+                  <div class="frame-17-8V7" style="background-image:url(${img});"></div>
                   <div class="frame-18-V4m">
                     <div class="frame-19-pcq">${title}</div>
                     <div class="frame-20-Y33">${friendName}</div>

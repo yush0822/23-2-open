@@ -87,24 +87,25 @@
               <script>
                 // 데이터 배열 예시
                 var playlistData = [
-                  { name: '노래이름1', artist: '가수이름1', imageSrc: './assets/frame-4.png' },
-                  { name: '노래이름2', artist: '가수이름2', imageSrc: './assets/frame-4.png' },
-                  { name: '노래이름2', artist: '가수이름2', imageSrc: './assets/frame-4.png' },
-                  { name: '노래이름2', artist: '가수이름2', imageSrc: './assets/frame-4.png' },
-                  { name: '노래이름2', artist: '가수이름2', imageSrc: './assets/frame-4.png' },
-                  { name: '노래이름2', artist: '가수이름2', imageSrc: './assets/frame-4.png' },
-                  { name: '노래이름2', artist: '가수이름2', imageSrc: './assets/frame-4.png' },
-                  { name: '노래이름2', artist: '가수이름2', imageSrc: './assets/frame-4.png' },
-                  { name: '노래이름2', artist: '가수이름2', imageSrc: './assets/frame-4.png' },
-                  { name: '노래이름2', artist: '가수이름2', imageSrc: './assets/frame-4.png' },
-                  { name: '노래이름2', artist: '가수이름2', imageSrc: './assets/frame-4.png' },
+                  { name: '노래이름1', artist: '가수이름1', imageSrc: 'https://i.ytimg.com/vi/7sFpX5vpCBk/maxresdefault.jpg', address: '' },
+                  { name: '노래이름2', artist: '가수이름2', imageSrc: './img/music.png', address: '' },
+                  { name: '노래이름2', artist: '가수이름2', imageSrc: './img/music.png', address: '' },
+                  { name: '노래이름2', artist: '가수이름2', imageSrc: './img/music.png', address: '' },
+                  { name: '노래이름2', artist: '가수이름2', imageSrc: './img/music.png', address: '' },
+                  { name: '노래이름2', artist: '가수이름2', imageSrc: './img/music.png', address: '' },
+                  { name: '노래이름2', artist: '가수이름2', imageSrc: './img/music.png', address: '' },
+                  { name: '노래이름2', artist: '가수이름2', imageSrc: './img/music.png', address: '' },
+                  { name: '노래이름2', artist: '가수이름2', imageSrc: './img/music.png', address: '' },
+                  { name: '노래이름2', artist: '가수이름2', imageSrc: './img/music.png', address: '' },
+                  { name: '노래이름2', artist: '가수이름2', imageSrc: './img/music.png', address: '' },
                   // ... 더 많은 데이터 추가 가능
                 ];
               
                 // 반복문을 통해 HTML 동적 생성
                 var playlistContainer = document.getElementById('playlistContainer');
                 playlistData.forEach(function (item) {
-                  var playlistItem = document.createElement('div');
+                  var playlistItem = document.createElement('a');
+                  playlistItem.href = `listen.${playlistItem.address}.html`;
                   playlistItem.style.width = '100%';
                   playlistItem.style.height = '100px';
                   playlistItem.style.border = 'solid 0.2rem rgba(0, 0, 0, 0.5)';
@@ -122,6 +123,7 @@
                   image.style.height = '100%';
                   image.style.padding = '5%';
                   image.style.borderRadius = '13%';
+                  image.style.objectFit= 'cover';
               
                   imageContainer.appendChild(image);
               
