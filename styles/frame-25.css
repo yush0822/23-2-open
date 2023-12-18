@@ -322,8 +322,8 @@ body {
 .frame-24-XxD .frame-27-YAV .frame-47-SdB .frame-67-wTT .frame-26-hBj .auto-group-6mtk-VG1 .frame-16-DSu {
   width: 20rem;
   height: 100%;
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
   flex-shrink: 0;
 }
 .frame-24-XxD .frame-27-YAV .frame-47-SdB .frame-67-wTT .frame-26-hBj .auto-group-6mtk-VG1 .frame-16-DSu .frame-17-Nah {
@@ -381,8 +381,8 @@ body {
 .frame-24-XxD .frame-27-YAV .frame-47-SdB .frame-67-wTT .frame-26-hBj .auto-group-6mtk-VG1 .frame-22-sQy {
   width: 20rem;
   height: 100%;
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
   flex-shrink: 0;
 }
 .frame-24-XxD .frame-27-YAV .frame-47-SdB .frame-67-wTT .frame-26-hBj .auto-group-6mtk-VG1 .frame-22-sQy .frame-17-dQ9 {
@@ -440,8 +440,8 @@ body {
 .frame-24-XxD .frame-27-YAV .frame-47-SdB .frame-67-wTT .frame-26-hBj .frame-16-kt5 {
   width: 20rem;
   height: 100%;
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
   flex-shrink: 0;
 }
 .frame-24-XxD .frame-27-YAV .frame-47-SdB .frame-67-wTT .frame-26-hBj .frame-16-kt5 .frame-17-KAV {
@@ -504,12 +504,10 @@ body {
   flex-shrink: 0;
 }
 .frame-24-XxD .frame-27-YAV .frame-47-SdB .frame-67-wTT .frame-26-hBj .auto-group-6mtk-VG1 .frame-16-R73 .frame-17-B6D {
-  width: 20rem;
+  width: 100%;
   height: 20rem;
-  position: absolute;
-  left: 0;
-  top: 0;
   overflow: hidden;
+  position: relative;
   background-color: #686868;
   border-radius: 2rem;
 }
@@ -517,11 +515,8 @@ body {
   box-sizing: border-box;
   padding: 1rem 0rem;
   width: 100%;
-  height: 10rem;
-  position: absolute;
-  left: 0;
-  top: 20rem;
   overflow: hidden;
+  position: relative;
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -623,8 +618,8 @@ body {
 .frame-24-XxD .frame-27-YAV .frame-47-SdB .frame-67-wTT .frame-26-hBj .auto-group-6mtk-VG1 .frame-16-GJ1 {
   width: 20rem;
   height: 100%;
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
   flex-shrink: 0;
 }
 .frame-24-XxD .frame-27-YAV .frame-47-SdB .frame-67-wTT .frame-26-hBj .auto-group-6mtk-VG1 .frame-16-GJ1 .frame-17-d8Z {
@@ -682,8 +677,8 @@ body {
 .frame-24-XxD .frame-27-YAV .frame-47-SdB .frame-67-wTT .frame-26-hBj .auto-group-6mtk-VG1 .frame-24-XdF {
   width: 20rem;
   height: 100%;
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
   flex-shrink: 0;
 }
 .frame-24-XxD .frame-27-YAV .frame-47-SdB .frame-67-wTT .frame-26-hBj .auto-group-6mtk-VG1 .frame-24-XdF .frame-17-V4H {
@@ -746,12 +741,10 @@ body {
   flex-shrink: 0;
 }
 .frame-24-XxD .frame-27-YAV .frame-47-SdB .frame-67-wTT .frame-26-hBj .auto-group-6mtk-VG1 .frame-25-zQM .frame-17-9HF {
-  width: 20rem;
+  width: 100%;
   height: 20rem;
-  position: absolute;
-  left: 0;
-  top: 0;
   overflow: hidden;
+  position: relative;
   background-color: #686868;
   border-radius: 2rem;
 }
@@ -759,11 +752,8 @@ body {
   box-sizing: border-box;
   padding: 1rem 0rem;
   width: 100%;
-  height: 10rem;
-  position: absolute;
-  left: 0;
-  top: 20rem;
   overflow: hidden;
+  position: relative;
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -865,8 +855,8 @@ body {
 .frame-24-XxD .frame-27-YAV .frame-47-SdB .frame-67-wTT .frame-26-hBj .auto-group-6mtk-VG1 .frame-27-W3F {
   width: 20rem;
   height: 100%;
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
   flex-shrink: 0;
 }
 .frame-24-XxD .frame-27-YAV .frame-47-SdB .frame-67-wTT .frame-26-hBj .auto-group-6mtk-VG1 .frame-27-W3F .frame-17-GHK {
@@ -993,8 +983,8 @@ body {
 .frame-24-XxD .frame-27-YAV .frame-47-SdB .frame-67-wTT .frame-63-mtH .auto-group-a2ym-az9 .frame-16-iaZ {
   width: 20rem;
   height: 100%;
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
   flex-shrink: 0;
 }
 .frame-24-XxD .frame-27-YAV .frame-47-SdB .frame-67-wTT .frame-63-mtH .auto-group-a2ym-az9 .frame-16-iaZ .frame-17-5R7 {
@@ -1052,8 +1042,8 @@ body {
 .frame-24-XxD .frame-27-YAV .frame-47-SdB .frame-67-wTT .frame-63-mtH .auto-group-a2ym-az9 .frame-22-bGy {
   width: 20rem;
   height: 100%;
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
   flex-shrink: 0;
 }
 .frame-24-XxD .frame-27-YAV .frame-47-SdB .frame-67-wTT .frame-63-mtH .auto-group-a2ym-az9 .frame-22-bGy .frame-17-Yxu {
@@ -1111,8 +1101,8 @@ body {
 .frame-24-XxD .frame-27-YAV .frame-47-SdB .frame-67-wTT .frame-63-mtH .auto-group-a2ym-az9 .frame-16-3oB {
   width: 20rem;
   height: 100%;
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
   flex-shrink: 0;
 }
 .frame-24-XxD .frame-27-YAV .frame-47-SdB .frame-67-wTT .frame-63-mtH .auto-group-a2ym-az9 .frame-16-3oB .frame-17-onM {
@@ -1175,12 +1165,10 @@ body {
   flex-shrink: 0;
 }
 .frame-24-XxD .frame-27-YAV .frame-47-SdB .frame-67-wTT .frame-63-mtH .auto-group-a2ym-az9 .frame-16-7wT .frame-17-svd {
-  width: 20rem;
+  width: 100%;
   height: 20rem;
-  position: absolute;
-  left: 0;
-  top: 0;
   overflow: hidden;
+  position: relative;
   background-color: #686868;
   border-radius: 2rem;
 }
@@ -1188,11 +1176,8 @@ body {
   box-sizing: border-box;
   padding: 1rem 0rem;
   width: 100%;
-  height: 10rem;
-  position: absolute;
-  left: 0;
-  top: 20rem;
   overflow: hidden;
+  position: relative;
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -1294,8 +1279,8 @@ body {
 .frame-24-XxD .frame-27-YAV .frame-47-SdB .frame-67-wTT .frame-63-mtH .auto-group-a2ym-az9 .frame-16-CtM {
   width: 20rem;
   height: 100%;
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
   flex-shrink: 0;
 }
 .frame-24-XxD .frame-27-YAV .frame-47-SdB .frame-67-wTT .frame-63-mtH .auto-group-a2ym-az9 .frame-16-CtM .frame-17-AaH {
@@ -1353,8 +1338,8 @@ body {
 .frame-24-XxD .frame-27-YAV .frame-47-SdB .frame-67-wTT .frame-63-mtH .auto-group-a2ym-az9 .frame-24-HHX {
   width: 20rem;
   height: 100%;
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
   flex-shrink: 0;
 }
 .frame-24-XxD .frame-27-YAV .frame-47-SdB .frame-67-wTT .frame-63-mtH .auto-group-a2ym-az9 .frame-24-HHX .frame-17-e85 {
@@ -1417,12 +1402,10 @@ body {
   flex-shrink: 0;
 }
 .frame-24-XxD .frame-27-YAV .frame-47-SdB .frame-67-wTT .frame-63-mtH .auto-group-a2ym-az9 .frame-25-VH7 .frame-17-RwT {
-  width: 20rem;
+  width: 100%;
   height: 20rem;
-  position: absolute;
-  left: 0;
-  top: 0;
   overflow: hidden;
+  position: relative;
   background-color: #686868;
   border-radius: 2rem;
 }
@@ -1430,11 +1413,8 @@ body {
   box-sizing: border-box;
   padding: 1rem 0rem;
   width: 100%;
-  height: 10rem;
-  position: absolute;
-  left: 0;
-  top: 20rem;
   overflow: hidden;
+  position: relative;
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -1536,8 +1516,8 @@ body {
 .frame-24-XxD .frame-27-YAV .frame-47-SdB .frame-67-wTT .frame-63-mtH .auto-group-a2ym-az9 .frame-27-C6y {
   width: 20rem;
   height: 100%;
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
   flex-shrink: 0;
 }
 .frame-24-XxD .frame-27-YAV .frame-47-SdB .frame-67-wTT .frame-63-mtH .auto-group-a2ym-az9 .frame-27-C6y .frame-17-xM3 {
