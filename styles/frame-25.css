@@ -1012,7 +1012,7 @@ body {
   overflow: hidden;
   position: relative;
   display: flex;
-  align-items: stretch;
+  align-items: center;
   justify-content: center;
   font-size: 2.4rem;
   font-weight: 400;
