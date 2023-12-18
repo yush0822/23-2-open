@@ -1,3 +1,8 @@
+
+
+
+<!-- //아이콘 변경부분- 현재 아이콘 받아오기&새로운 아이콘 업로드 , 플레이리스트 받아오는것 // 수정 필요-->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,8 +50,7 @@
         </div>
         <a href="main.html" class="frame-5-bz1">홈</a>
         <a href="friends.html" class="frame-6-tiD">친구</a>
-        <a th:href="@{/main/user/update/{userid}(userid=${#authentication.name})}" class="frame-6-f6h">
-프로필</a>
+        <a th:href="@{/main/user/update/{userid}(userid=${#authentication.name})}" class="frame-6-f6h">프로필</a>
 
         <div style="width: 100%;height:40%;align-items: flex-end;display:flex;justify-content:center;">
           <a href="listcreat.html" class="frame-4-yBw" style="width: 50px;; height:50px; border-radius: 5rem; background-color:#525252;bottom:40%;">
@@ -75,16 +79,17 @@
               }
 
               // 모달 닫기
-              function closeModal() {
+              function closeModal_Icon() {
                 var modal = document.getElementById('myModal');
                 modal.style.display = 'none';
                 document.body.style.overflow = 'auto'; // 스크롤 다시 허용
+                
               }
 
               // 백드롭 클릭 방지
               document.getElementById('myModal').addEventListener('click', function (event) {
                 if (event.target === this) {
-                  closeModal(); // 모달 백드롭 클릭 시 모달 닫기
+                  closeModal_Icon(); // 모달 백드롭 클릭 시 모달 닫기
                 }
               });
             </script>
@@ -99,190 +104,188 @@
             <div class="frame-22-A5K" style="width:100%;margin: 0.55rem 20rem 0.55rem 0rem;">내가 만든 플레이 리스트</div>
             <a href="main.html" class="frame-23-qBT">더보기</a>
           </div>
-          <div class="auto-group-6mtk-VG1">
+          
+          <div class="auto-group-6mtk-VG1" id="my_playlist"></div>
+          <script>
+            const myPlaylists = [
+            { title: "플리제목 1", img:"./assets/frame-4.png"},
+            { title: "플리제목 2", img:""},
+            { title: "플리제목 3", img:""},
+            { title: "플리제목 4", img:""},
+            { title: "플리제목 5", img:""},
+            { title: "플리제목 6", img:""},
+            { title: "플리제목 7", img:""},
+            { title: "플리제목 8", img:""}
+          ];
+          const my_Playlist = document.getElementById("my_playlist");
+
+          myPlaylists.forEach(({ title, img }) => {
+            const myPlaylistHtml = `
             <a href="playlist.html" class="frame-16-DSu">
-              <div class="frame-17-Nah">
+              <div class="frame-17-Nah" style="background-image:url(${img});">
               </div>
               <div class="frame-18-845" style="height:20%;margin-top:15px">
-                <div class="frame-19-Ts3">플리제목 1</div>
+                <div class="frame-19-Ts3">${title}</div>
               </div>
             </a>
-            <a href="playlist.html" class="frame-22-sQy">
-              <div class="frame-17-dQ9">
-              </div>
-              <div class="frame-18-yyo" style="height:20%;margin-top:15px">
-                <div class="frame-19-XkR">플리제목 1</div>
-              </div>
-            </a>
-            <a href="playlist.html" class="frame-16-kt5">
-              <div class="frame-17-KAV">
-              </div>
-              <div class="frame-18-TXb" style="height:20%;margin-top:15px">
-                <div class="frame-19-Ck5">플리제목 1</div>
-              </div>
-            </a>
-            <a href="playlist.html" class="frame-16-R73">
-              <div class="frame-17-B6D">
-              </div>
-              <div class="frame-18-Jgd" style="height:20%;margin-top:15px">
-                <div class="frame-19-cxD">플리제목 1</div>
-              </div>              
-            </a>
-            <a href="playlist.html" class="frame-16-GJ1">
-              <div class="frame-17-d8Z">
-              </div>
-              <div class="frame-18-mkZ" style="height:20%;margin-top:15px">
-                <div class="frame-19-urm">플리제목 1</div>
-              </div>
-            </a>
-            <a href="playlist.html" class="frame-24-XdF">
-              <div class="frame-17-V4H">
-              </div>
-              <div class="frame-18-35o" style="height:20%;margin-top:15px">
-                <div class="frame-19-n3P">플리제목 1</div>
-              </div>
-            </a>
-            <a href="playlist.html" class="frame-25-zQM">
-              <div class="frame-17-9HF">
-              </div>
-              <div class="frame-18-gHB" style="height:20%;margin-top:15px">
-                <div class="frame-19-CFX">플리제목 1</div>
-              </div>              
-            </a>
-            
-          </div>
+            `;
+        
+            // Append the generated HTML to the my playlist container
+            my_playlist.innerHTML += myPlaylistHtml;
+          });
+        </script>
+
+          
         </div>
         <div class="frame-63-mtH" style="width: 1300px;">
           <div class="frame-21-hmw">
             <div class="frame-22-dQh"style="width:100%;">공동 작업하는 플레이 리스트</div>
             <a href="main.html" class="frame-23-JFw">더보기</a>
           </div>
-          <div class="auto-group-a2ym-az9">
+          <div class="auto-group-a2ym-az9" id="public_playlist"></div>
+
+
+
+          <script>
+            const publicPlaylists = [
+            { title: "플리제목 1", img:"./assets/frame-4.png"},
+            { title: "플리제목 2", img:""},
+            { title: "플리제목 3", img:""},
+            { title: "플리제목 4", img:""},
+            { title: "플리제목 5", img:""},
+            { title: "플리제목 6", img:""},
+            { title: "플리제목 7", img:""},
+            { title: "플리제목 8", img:""}
+          ];
+          const public_Playlist = document.getElementById("public_playlist");
+
+          publicPlaylists.forEach(({ title, img }) => {
+            const publicPlaylistHtml = `
             <a href="playlist.html" class="frame-16-iaZ">
-              <div class="frame-17-5R7">
+              <div class="frame-17-5R7" style="background-image:url(${img});">
               </div>
               <div class="frame-18-dSd" style="height:20%;margin-top:15px">
-                <div class="frame-19-yFb" style="height:100%;text-align:center">플리제목 1</div>
+                <div class="frame-19-yFb" style="height:100%;text-align:center">${title}</div>
               </div>
             </a>
-            <a href="playlist.html" class="frame-22-bGy">
-              <div class="frame-17-Yxu">
-              </div>
-              <div class="frame-18-W93" style="height:20%;margin-top:15px">
-                <div class="frame-19-FMX" style="height:100%;text-align:center">플리제목 2</div>
-              </div>
-            </a>
-            <a href="playlist.html" class="frame-16-3oB">
-              <div class="frame-17-onM">
-              </div>
-              <div class="frame-18-MYy" style="height:20%;margin-top:15px">
-                <div class="frame-19-uKb" style="height:100%;text-align:center">플리제목 3</div>
-              </div>
-            </a>
-            <a href="playlist.html" class="frame-16-7wT">
-              <div class="frame-17-svd">
-              </div>
-              <div class="frame-18-22q" style="height:20%;margin-top:15px">
-                <div class="frame-19-jhw" style="height:100%;text-align:center">플리제목 4</div>
-              </div>              
-            </a>
-            <a href="playlist.html" class="frame-16-CtM">
-              <div class="frame-17-AaH">
-              </div>
-              <div class="frame-18-Wu3" style="height:20%;margin-top:15px">
-                <div class="frame-19-4Qm" style="height:100%;text-align:center">플리제목 5</div>
-              </div>
-            </a>
-            <a href="playlist.html" class="frame-24-HHX">
-              <div class="frame-17-e85">
-              </div>
-              <div class="frame-18-zBw" style="height:20%;margin-top:15px">
-                <div class="frame-19-itd" style="height:100%;text-align:center">플리제목 6</div>
-              </div>
-            </a>
-            <a href="playlist.html" class="frame-25-VH7">
-              <div class="frame-17-RwT">
-              </div>
-              <div class="frame-18-Znm" style="height:20%;margin-top:15px">
-                <div class="frame-19-621" style="height:100%;text-align:center">플리제목 7</div>
-              </div>
-            </a>            
-          </div>
-        </div>
+            `;
+        
+            // Append the generated HTML to the public playlist container
+            public_playlist.innerHTML += publicPlaylistHtml;
+          });
+        </script>
+
+        
       </div>
     </div>
 
         
         
+<!-- 모달 -->
+<div id="myModal" style="display: none; position: fixed; top: 0; left: 0%; 
+width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); justify-content: center; align-items: center; pointer-events: none;">
+  <!-- 모달 내용 -->
+  <div style="width: 40%; height: 50%; background-color: #fff; padding: 0.5%; border-radius: 5px; left: 0%; position: relative; pointer-events: auto;">
+    <div style="width: 100%; height: 10%; flex-direction: row; display: flex;">
+      <div style="width: 100%; height: 100%;">
+        <p style="width: 100%; height: 100%; color: black; font-size: 4rem; text-align: center; font-style: blond; margin-top: 2%;">
+          아이콘 변경
+        </p>
+      </div>
+      <div style="width: 5%; height: 100%;">
+        <span style="width: 100%; height: 100%; cursor: pointer; color: black; font-size: 3rem;" onclick="closeModal_Icon()">&times;</span>
+      </div>
+    </div>
+    <div style="width: 100%; height: 90%; flex-direction: column; display: flex; overflow: auto">
 
-          <!-- 모달 -->
-          <div id="myModal" style="display: none; position: fixed; top: 0; left: 0%; 
-          width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); justify-content: center; align-items: center; pointer-events: none;">
-        <!-- 모달 내용 -->
-        <div style="width:40%;height:50%;background-color: #fff; padding: 0.5%; border-radius: 5px; left:0%;position: relative; pointer-events: auto; ">
-          <div style="width:100%;height:10%;flex-direction:row;display:flex">
-            <div style="width: 100%;height:100%;">
-              <p style="width:100%;height:100%;color:black;font-size:4rem;text-align:center; font-style:blond;margin-top:2%;">
+      <div class="frame-62-SWh" style="width: 100%; height: 100%; align-items: center; flex-direction: column; display: flex;">
+        <div style="width: 100%; height: 60%; align-items: center; flex-direction: row; display: flex;">
+          <div style="width: 45%; height: 100%; align-items: center; flex-direction: row; display: flex;">
+            <img id="currentIcon" src="img/about.jpg" alt="현재 아이콘" style="width: 90%; height: 90%; margin-left: 5%; border: solid 0.1rem rgb(0, 0, 0);">
+          </div>
+          <div style="width: 10%; height: 100%; align-items: center; flex-direction: row; display: flex;">
+            <img id="currentIcon" src="./img/next.png" alt="우측 사진으로 변환" style="width: 100%; height: 20%">
+          </div>
+          <div style="width: 45%; height: 100%; align-items: center; flex-direction: row; display: flex;">
+            <img class="image-show" id="image-show" src="img/about.jpg" style="width: 90%; height: 90%; margin-left: 5%; border: solid 0.1rem rgb(0, 0, 0);">
+          </div>
+        </div>
+
+        <div style="width: 100%; height: 40%;">
+          <form action="/main/user/update/profileImage" method="post" enctype="multipart/form-data" style="width: 100%; height: 100%; align-items: center; flex-direction: row; display: flex;">
+
+            <div style="width: 45%; height: 100%; align-items: center; flex-direction: row; display: flex;">
+              <div style="width: 50%; height: 50%; display: flex; align-items: center; justify-content: center; margin-left: 25%;">
+                <label for="chooseFile" style="width: 100%; height: 100%; background-color: rgb(236, 236, 236); display: flex; align-items: center; justify-content: center; color: black; font-size: 3rem; border: solid 0.3rem rgb(0, 0, 0);">파일 선택
+                  <input type="file" id="chooseFile" name="chooseFile" accept="image/*" onchange="loadFile(this)" style="width: 100%; height: 100%; display: none;">
+                </label>
+              </div>
+            </div>
+
+            <div style="width: 10%; height: 100%; align-items: center; display: flex; justify-content: center;"></div>
+
+            <div style="width: 45%; height: 100%; align-items: center; display: flex; justify-content: center; ">
+              <button type="button" id="submitButton" style="width: 50%; height: 50%; display: flex; align-items: center; justify-content: center; font-size: 3rem; text-align: center;" onclick="uploadImage()">
                 아이콘 변경
-              </p>
+              </button>
             </div>
-            <div style="width: 5%;height:100%;">
-              <span style="width:100%;height:100%; cursor: pointer;color:black;font-size:3rem;" onclick="closeModal()">&times;</span>
-            </div>
-          </div>
-          <div style="width:100%;height:90%;flex-direction:column;display:flex;overflow:auto">
-            
-              
-                <!-- 모달 내용 추가 -->
-                <div class="frame-62-SWh" style="width: 100%;height:100%;align-items: center;flex-direction:column;display:flex;">
-                  <div style="width: 100%;height:60%;align-items: center;flex-direction:row;display:flex;">
-                    <div style="width: 45%;height:100%;align-items: center;flex-direction:row;display:flex;">
-                      <img id="currentIcon" src="img/about.jpg" alt="현재 아이콘" style="width: 90%;height:90%;margin-left:5%;border: solid 0.1rem rgb(0, 0, 0);">
-                    </div>
-                    <div style="width: 10%;height:100%;align-items: center;flex-direction:row;display:flex;">
-                      <img id="currentIcon" src="./img/next.png" alt="현재 아이콘" style="width: 100%;height:20%">
-                    </div>
-                    <div style="width: 45%;height:100%;align-items: center;flex-direction:row;display:flex;">
-                      <img id="currentIcon" src="img/about.jpg" alt="미래 아이콘" style="width: 90%;height:90%;margin-left:5%;border: solid 0.1rem rgb(0, 0, 0);">
-                    </div>
-                    
 
-                  </div>
-                  <div style="width: 100%;height:40%;">
-                    <form action="/main/user/update/profileImage" method="post" enctype="multipart/form-data" style="width: 100%;height:100%;align-items: center;flex-direction:row;display:flex;">
-                      <div style="width: 45%;height:100%;align-items: center;flex-direction:row;display:flex;">
-                        <div style="width: 50%; height: 50%; display: flex; align-items: center; justify-content: center;margin-left:25%;">
-                          <label style="width: 100%; height: 100%;background-color:rgb(236, 236, 236);display: flex; align-items: center; justify-content: center;color:black;font-size:3rem;border: solid 0.1rem rgb(0, 0, 0);">파일 선택
-                            <input type="file" id="profileIcon" name="filename" accept="image/*" style="width: 100%; height: 100%; display: none;">
-                          </label>
-                          
-                        </div>
-                      </div>
-
-                      <div style="width: 10%;height:100%;align-items: center;;display:flex; justify-content: center;">
-                        
-                      </div>
-                      
-                      <div style="width: 45%;height:100%;align-items: center;;display:flex; justify-content: center; ">
-                        <button type="submit" style="width: 50%; height: 50%; display: flex; align-items: center; justify-content: center; font-size: 3rem; text-align: center;">
-                          아이콘 변경
-                        </button>
-                      </div>
-                      
-                    </form>
-                  </div>
-
-                </div>
-              
-          </div>
+          </form>
         </div>
-        </div>
+      </div>
 
+    </div>
+  </div>
+</div>
       </div>
     </div>
-
+    <script>
+      //function uploadImage() {
+        // 이미지를 서버로 업로드하는 코드
+        //var selectedFile = document.getElementById('chooseFile').files[0];
     
+        //if (selectedFile) {
+          //var formData = new FormData();
+          //formData.append('image', selectedFile);
+    
+          // 여기에 서버로 데이터를 전송하는 AJAX 또는 fetch 코드를 추가해야 합니다.
+          // 아래는 예시 코드입니다.
+          //fetch('/main/user/update/profileImage', {
+            //method: 'POST',
+            //body: formData
+          //})
+          //.then(response => response.json())
+          //.then(data => {
+            // 서버 응답에 따른 동작 추가
+            //alert("이미지를 데이터베이스에 업로드하고 창을 닫습니다.");
+            //closeModal_Icon();
+          //})
+          //.catch(error => console.error('Error:', error));
+        //} else {
+          //alert("이미지를 선택하세요.");
+        //}
+      //}
+      
+      function uploadImage() {
+        // 이미지를 서버로 업로드하는 코드 추가
+        // 서버로 데이터를 보내어 데이터베이스에 이미지를 업로드하는 부분은 서버 구현이 필요하며, 실제 서버 구현에 따라 수정이 필요합니다.
+        alert("이미지를 데이터베이스에 업로드하고 창을 닫습니다.");
+        closeModal_Icon();
+      }
+
+      function loadFile(input) {
+        // 파일 선택 후 미리보기
+        var preview = document.getElementById('image-show');
+        var file = input.files[0];
+        var reader = new FileReader();
+    
+        reader.onload = function (e) {
+          preview.src = e.target.result;
+        };
+    
+        reader.readAsDataURL(file);
+      }
+    </script>
 
 </body>
-
 </html>

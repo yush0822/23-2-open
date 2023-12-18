@@ -43,8 +43,7 @@
         </div>
         <a href="main.html" class="frame-5-bz1">홈</a>
         <a href="friends.html" class="frame-6-tiD">친구</a>
-        <a th:href="@{/main/user/update/{userid}(userid=${#authentication.name})}" class="frame-6-f6h">
-프로필</a>
+        <a th:href="@{/main/user/update/{userid}(userid=${#authentication.name})}" class="frame-6-f6h">프로필</a>
 
         <div style="width: 100%;height:40%;align-items: flex-end;display:flex;justify-content:center;">
           <a href="listcreat.html" class="frame-4-yBw" style="width: 50px;; height:50px; border-radius: 5rem; background-color:#525252;bottom:40%;">
@@ -348,165 +347,96 @@
       </script>
 
         </div>
+        
         <div class="frame-25-NFB">
           <div class="frame-21-hoF">
-            <div class="frame-22-1ow"style="width: 300px;" >나의 플레이리스트</div>
+            <div class="frame-22-1ow" style="width: 300px;">나의 플레이리스트</div>
             <a href="main.html" class="frame-23-HFf">더보기</a>
-            
           </div>
-          <div class="auto-group-7kpf-Nnu">
-            <a href="playlist.html" class="frame-16-tFT">
-              <div class="frame-17-SXs">
-              </div>
-              <div class="frame-18-C1F">
-                <div class="frame-19-XZK">노래제목 1</div>
-                <div class="frame-20-Rub">가수이름 1</div>
-              </div>
-            </a>
-            <a href="playlist.html" class="frame-22-8p1">
-              <div class="frame-17-Hwo">
-              </div>
-              <div class="frame-18-qiR">
-                <div class="frame-19-aR7">노래제목 1</div>
-                <div class="frame-20-VHB">가수이름 1</div>
-              </div>
-            </a>
-            <a href="playlist.html" class="frame-16-ChP">
-              <div class="frame-17-xAm">
-              </div>
-              <div class="frame-18-Hyj">
-                <div class="frame-19-Rq3">노래제목 1</div>
-                <div class="frame-20-8UZ">가수이름 1</div>
-              </div>
-            </a>
-            <a href="playlist.html" class="frame-16-RCm">
-              <div class="frame-17-a5f">
-              </div>
-              <div class="frame-18-iSm">
-                <div class="frame-19-nhX">노래제목 1</div>
-                <div class="frame-20-6TK">가수이름 1</div>
-              </div>
-            </a>
-            <a href="playlist.html" class="frame-16-Dpm">            
-              <div class="frame-17-n7B">
-              </div>
-              <div class="frame-18-vUH">
-                <div class="frame-19-FFf">노래제목 1</div>
-                <div class="frame-20-MZb">가수이름 1</div>
-              </div>            
-            </a>
-
-            <a href="playlist.html" class="frame-24-f4V">
-              <div class="frame-17-1u3">
-              </div>
-              <div class="frame-18-mNR">
-                <div class="frame-19-JdF">노래제목 1</div>
-                <div class="frame-20-cP3">가수이름 1</div>
-              </div>
-            </a>
-
-            <a href="playlist.html" class="frame-25-iws">
-              <div class="frame-17-HEH">
-              </div>
-              <div class="frame-18-2Sm">
-                <div class="frame-19-k7s">노래제목 1</div>
-                <div class="frame-20-FKX">가수이름 1</div>
-              </div>
-            </a>
-
-            <a href="playlist.html" class="frame-27-p9f">
-              <div class="frame-17-AjK">
-              </div>
-              <div class="frame-18-8AM">
-                <div class="frame-19-sNq">노래제목 1</div>
-                <div class="frame-20-nVo">가수이름 1</div>
-              </div>
-            </a>
-
+          <div class="auto-group-7kpf-Nnu" id="myPlaylistContainer">
+            <!-- Generated my playlist items will be inserted here -->
           </div>
         </div>
+        
+        <script>
+          // Sample data for my playlists
+          const myPlaylists = [
+            { title: "노래제목 1", artist: "가수이름 1" },
+            { title: "노래제목 2", artist: "가수이름 2" },
+            { title: "노래제목 3", artist: "가수이름 3" },
+            { title: "노래제목 4", artist: "가수이름 4" },
+            { title: "노래제목 5", artist: "가수이름 5" },
+            { title: "노래제목 6", artist: "가수이름 6" },
+            { title: "노래제목 7", artist: "가수이름 7" },
+            { title: "노래제목 8", artist: "가수이름 8" }
+          ];
+        
+          // Get the my playlist container
+          const myPlaylistContainer = document.getElementById("myPlaylistContainer");
+        
+          // Loop through my playlists and generate HTML
+          myPlaylists.forEach(({ title, artist }) => {
+            const myPlaylistHtml = `
+              <a href="playlist.html" class="frame-16-tFT">
+                <div class="frame-17-SXs"></div>
+                <div class="frame-18-C1F">
+                  <div class="frame-19-XZK">${title}</div>
+                  <div class="frame-20-Rub">${artist}</div>
+                </div>
+              </a>
+            `;
+        
+            // Append the generated HTML to the my playlist container
+            myPlaylistContainer.innerHTML += myPlaylistHtml;
+          });
+        </script>
+        
+
         <div href="main.html" class="frame-26-U7j">
           <div class="frame-21-by3">
             <div class="frame-22-uiq" style="width: 300px;">친구의 플레이리스트</div>
             <a href="main.html" class="frame-23-aKB">더보기</a>
           </div>
-          <div class="auto-group-qd1s-rnV">
-            
-            <a href="playlist.html" class="frame-16-NVw">
-              <div class="frame-17-8V7">
-              </div>
-              <div class="frame-18-V4m">
-                <div class="frame-19-pcq">플리제목 1</div>
-                <div class="frame-20-Y33">친구이름 1</div>
-              </div>
-            </a>
-
-            <a href="playlist.html" class="frame-22-Su7">
-              <div class="frame-17-CdP">
-              </div>
-              <div class="frame-18-Ljb">
-                <div class="frame-19-gYZ">플리제목 1</div>
-                <div class="frame-20-CG1">친구이름 1</div>
-              </div>
-            </a>
-
-            <a href="playlist.html" class="frame-16-hTf">
-              <div class="frame-17-4JD">
-              </div>
-              <div class="frame-18-1DT">
-                <div class="frame-19-YUH">플리제목 1</div>
-                <div class="frame-20-F7o">친구이름 1</div>
-              </div>
-            </a>
-
-            <a href="playlist.html" class="frame-16-x2D">
-              <div class="frame-17-hVb">
-              </div>
-              <div class="frame-18-r7b">
-                <div class="frame-19-Ae5">플리제목 1</div>
-                <div class="frame-20-5m3">친구이름 1</div>
-              </div>              
-            </a>
-
-            <a href="playlist.html" class="frame-16-Gj3">
-              <div class="frame-17-7zZ">
-              </div>
-              <div class="frame-18-UaD">
-                <div class="frame-19-cwK">플리제목 1</div>
-                <div class="frame-20-Y4H">친구이름 1</div>
-              </div>
-            </a>
-
-            <a href="playlist.html" class="frame-24-dLd">
-              <div class="frame-17-BN9">
-              </div>
-              <div class="frame-18-LF3">
-                <div class="frame-19-gJu">플리제목 1</div>
-                <div class="frame-20-nsj">친구이름 1</div>
-              </div>
-            </a>
-
-            <a href="playlist.html" class="frame-25-hzh">
-              <div class="frame-17-fRj">
-              </div>
-              <div class="frame-18-CgZ">
-                <div class="frame-19-XD3">플리제목 1</div>
-                <div class="frame-20-2fb">친구이름 1</div>
-              </div>              
-            </a>
-
-            <a href="playlist.html" class="frame-27-cnD">
-              <div class="frame-17-ZhT">
-              </div>
-              <div class="frame-18-HdT">
-                <div class="frame-19-CEd">플리제목 1</div>
-                <div class="frame-20-qYV">친구이름 1</div>
-              </div>
-            </a>
+          <div class="auto-group-qd1s-rnV" id="friendPlaylistContainer">
+            <!-- Generated friend playlist items will be inserted here -->
           </div>
+          
+          <script>
+            // Sample data for friend playlists
+            const friendPlaylists = [
+              { title: "플리제목 1", friendName: "친구이름 1" },
+              { title: "플리제목 2", friendName: "친구이름 2" },
+              { title: "플리제목 3", friendName: "친구이름 3" },
+              { title: "플리제목 4", friendName: "친구이름 4" },
+              { title: "플리제목 5", friendName: "친구이름 5" },
+              { title: "플리제목 6", friendName: "친구이름 6" },
+              { title: "플리제목 7", friendName: "친구이름 7" },
+              { title: "플리제목 8", friendName: "친구이름 8" }
+            ];
+          
+            // Get the friend playlist container
+            const friendPlaylistContainer = document.getElementById("friendPlaylistContainer");
+          
+            // Loop through friend playlists and generate HTML
+            friendPlaylists.forEach(({ title, friendName }) => {
+              const friendPlaylistHtml = `
+                <a href="playlist.html" class="frame-16-NVw">
+                  <div class="frame-17-8V7"></div>
+                  <div class="frame-18-V4m">
+                    <div class="frame-19-pcq">${title}</div>
+                    <div class="frame-20-Y33">${friendName}</div>
+                  </div>
+                </a>
+              `;
+          
+              // Append the generated HTML to the friend playlist container
+              friendPlaylistContainer.innerHTML += friendPlaylistHtml;
+            });
+          </script>
+          
         </div>
         
-      </div>
+      </v>
     </div>
 
     

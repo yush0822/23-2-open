@@ -43,8 +43,7 @@
         </div>
         <a href="main.html" class="frame-5-bz1">홈</a>
         <a href="friends.html" class="frame-6-tiD">친구</a>
-        <a th:href="@{/main/user/update/{userid}(userid=${#authentication.name})}" class="frame-6-f6h">
-프로필</a>
+        <a th:href="@{/main/user/update/{userid}(userid=${#authentication.name})}" class="frame-6-f6h">프로필</a>
         </div>
 
         <a href="main.html" class="frame-4-yBw" style="border: solid 0.2rem rgba(255, 255, 255); width:50px; height:50px; border-radius: 5rem; background-color:#525252; position:fixed;top:5%;left:200px;">
@@ -111,7 +110,13 @@
             </div>
 
               <div class="frame-60-ZRF" style="color: #ffffff;align-items:center;height:12%;display:flex;flex-direction: row;border:0rem">
-                <button href="main.html" id="toggleButton2" style="margin-right: 20%;height:65%;width:20%;background-color:#525252;color:#ffffff"><span>저 장</span></button>
+                <button onclick="listcreat()" href="main.html" id="toggleButton2" style="margin-right: 20%;height:65%;width:20%;background-color:#525252;color:#ffffff"><span>저 장</span></button>
+                <script>
+                  function listcreat() {
+                  
+                  }
+                </script>
+                
                 <button href="main.html" id="toggleButton2" style="height:65%;width:20%;background-color:#525252;color:#ffffff;"><span>취 소</span></button>
 
               </div>

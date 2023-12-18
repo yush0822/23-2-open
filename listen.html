@@ -44,13 +44,9 @@
         </div>
         <a href="main.html" class="frame-5-bz1">홈</a>
         <a href="friends.html" class="frame-6-tiD">친구</a>
-        <a th:href="@{/main/user/update/{userid}(userid=${#authentication.name})}" class="frame-6-f6h">
-프로필</a>
+        <a th:href="@{/main/user/update/{userid}(userid=${#authentication.name})}" class="frame-6-f6h">프로필</a>
       </div>
       <div class="frame-27-YAV">
-        
-        
-        
         
         <div class="frame-27-fXX">
           <div class="frame-47-SfX">
@@ -84,27 +80,87 @@
                 overflow: hidden; background-color: #ffffff00; border: solid 0.1rem #7f7f7f;
                 color:#ffffff;  text-align: center; line-height: 60px">플레이 리스트 이름</span>
               </div>
-              <div style="height: 100%; overflow: auto;">
-                <div style="width: 100%;height:100px;border: solid 0.2rem rgba(0, 0, 0, 0.5);"></div>
-                <div style="width: 100%;height:100px;border: solid 0.2rem rgba(0, 0, 0, 0.5);"></div>
-                <div style="width: 100%;height:100px;border: solid 0.2rem rgba(0, 0, 0, 0.5);"></div>
-                <div style="width: 100%;height:100px;border: solid 0.2rem rgba(0, 0, 0, 0.5);"></div>
-                <div style="width: 100%;height:100px;border: solid 0.2rem rgba(0, 0, 0, 0.5);"></div>
-                <div style="width: 100%;height:100px;border: solid 0.2rem rgba(0, 0, 0, 0.5);"></div>
-                <div style="width: 100%;height:100px;border: solid 0.2rem rgba(0, 0, 0, 0.5);"></div>
-                <div style="width: 100%;height:100px;border: solid 0.2rem rgba(0, 0, 0, 0.5);"></div>
-                <div style="width: 100%;height:100px;border: solid 0.2rem rgba(0, 0, 0, 0.5);"></div>
-                <div style="width: 100%;height:100px;border: solid 0.2rem rgba(0, 0, 0, 0.5);"></div>
-                <div style="width: 100%;height:100px;border: solid 0.2rem rgba(0, 0, 0, 0.5);"></div>
-                <div style="width: 100%;height:100px;border: solid 0.2rem rgba(0, 0, 0, 0.5);"></div>
-                <div style="width: 100%;height:100px;border: solid 0.2rem rgba(0, 0, 0, 0.5);"></div>
-                <div style="width: 100%;height:100px;border: solid 0.2rem rgba(0, 0, 0, 0.5);"></div>
-                <div style="width: 100%;height:100px;border: solid 0.2rem rgba(0, 0, 0, 0.5);"></div>
-                <div style="width: 100%;height:100px;border: solid 0.2rem rgba(0, 0, 0, 0.5);"></div>
-                <div style="width: 100%;height:100px;border: solid 0.2rem rgba(0, 0, 0, 0.5);"></div>
-                <div style="width: 100%;height:100px;border: solid 0.2rem rgba(0, 0, 0, 0.5);"></div>
-                <div style="width: 100%;height:100px;border: solid 0.2rem rgba(0, 0, 0, 0.5);"></div>
-              </div>
+
+
+              <div style="height: 90%; overflow: auto;" id="playlistContainer"></div>
+
+              <script>
+                // 데이터 배열 예시
+                var playlistData = [
+                  { name: '노래이름1', artist: '가수이름1', imageSrc: './assets/frame-4.png' },
+                  { name: '노래이름2', artist: '가수이름2', imageSrc: './assets/frame-4.png' },
+                  { name: '노래이름2', artist: '가수이름2', imageSrc: './assets/frame-4.png' },
+                  { name: '노래이름2', artist: '가수이름2', imageSrc: './assets/frame-4.png' },
+                  { name: '노래이름2', artist: '가수이름2', imageSrc: './assets/frame-4.png' },
+                  { name: '노래이름2', artist: '가수이름2', imageSrc: './assets/frame-4.png' },
+                  { name: '노래이름2', artist: '가수이름2', imageSrc: './assets/frame-4.png' },
+                  { name: '노래이름2', artist: '가수이름2', imageSrc: './assets/frame-4.png' },
+                  { name: '노래이름2', artist: '가수이름2', imageSrc: './assets/frame-4.png' },
+                  { name: '노래이름2', artist: '가수이름2', imageSrc: './assets/frame-4.png' },
+                  { name: '노래이름2', artist: '가수이름2', imageSrc: './assets/frame-4.png' },
+                  // ... 더 많은 데이터 추가 가능
+                ];
+              
+                // 반복문을 통해 HTML 동적 생성
+                var playlistContainer = document.getElementById('playlistContainer');
+                playlistData.forEach(function (item) {
+                  var playlistItem = document.createElement('div');
+                  playlistItem.style.width = '100%';
+                  playlistItem.style.height = '100px';
+                  playlistItem.style.border = 'solid 0.2rem rgba(0, 0, 0, 0.5)';
+                  playlistItem.style.display = 'flex';
+                  playlistItem.style.justifyContent = 'flex';
+              
+                  var imageContainer = document.createElement('div');
+                  imageContainer.style.width = '35%';
+                  imageContainer.style.height = '100%';
+              
+                  var image = document.createElement('img');
+                  image.src = item.imageSrc;
+                  image.alt = 'Description of the image';
+                  image.style.width = '100%';
+                  image.style.height = '100%';
+                  image.style.padding = '5%';
+                  image.style.borderRadius = '13%';
+              
+                  imageContainer.appendChild(image);
+              
+                  var textContainer = document.createElement('div');
+                  textContainer.style.width = '65%';
+                  textContainer.style.height = '100%';
+                  textContainer.style.display = 'flex';
+                  textContainer.style.flexDirection = 'column';
+              
+                  var nameText = document.createElement('div');
+                  nameText.style.width = '100%';
+                  nameText.style.height = '50%';
+                  nameText.style.fontSize = '16px';
+                  nameText.style.display = 'flex';
+                  nameText.style.alignItems = 'center';
+                  nameText.style.color = 'white';
+                  nameText.style.paddingLeft = '2%';
+                  nameText.textContent = item.name;
+              
+                  var artistText = document.createElement('div');
+                  artistText.style.width = '100%';
+                  artistText.style.height = '50%';
+                  artistText.style.fontSize = '16px';
+                  artistText.style.display = 'flex';
+                  artistText.style.alignItems = 'center';
+                  artistText.style.color = 'white';
+                  artistText.style.paddingLeft = '2%';
+                  artistText.textContent = item.artist;
+              
+                  textContainer.appendChild(nameText);
+                  textContainer.appendChild(artistText);
+              
+                  playlistItem.appendChild(imageContainer);
+                  playlistItem.appendChild(textContainer);
+              
+                  playlistContainer.appendChild(playlistItem);
+                });
+              </script>
+              
 
             </div>
           </div>

@@ -107,90 +107,78 @@
               
               
                 <div class="frame-47-e3P" style="overflow: scroll;">
-                  <div class="frame-53-qdf">
-                    
-                    
-                    <a href="profile.html" class="frame-58-zWZ" style="padding:0rem;display:flex;align-items:center;">
-                      <div style="width:100%;height:100%;display:flex;flex-direction: row;">
-                        <div style="width:20%;height:100%;display:flex;align-items:center;">
-                          <img src="img/about.jpg" style="margin-left:10%;width: 80%; height: 80%;object-fit: contain;border-radius: 1rem;border: solid 0.2rem rgb(255, 255, 255);">
-                        </div>
-                        <div style="width: 80%;height:100%;display:flex;flex-direction: column;">
-                          <span class="frame-58-zWZ-sub-1" style="width:100%;height:100%;font-size:16px;display: flex; align-items: center;color:#fff"> 친구 이름</span>                          
-                        </div>
-                      </div>
-                    </a>
+                  <div class="frame-53-qdf" id="friendListContainer"></div>
 
-                    <a href="profile.html" class="frame-58-zWZ" style="padding:0rem;display:flex;align-items:center;">
-                      <div style="width:100%;height:100%;display:flex;flex-direction: row;">
-                        <div style="width:20%;height:100%;display:flex;align-items:center;">
-                          <img src="img/about.jpg" style="margin-left:10%;width: 80%; height: 80%;object-fit: contain;border-radius: 1rem;border: solid 0.2rem rgb(255, 255, 255);">
-                        </div>
-                        <div style="width: 80%;height:100%;display:flex;flex-direction: column;">
-                          <span class="frame-58-zWZ-sub-1" style="width:100%;height:100%;font-size:16px;display: flex; align-items: center;color:#fff"> 친구 이름</span>                          
-                        </div>
-                      </div>
-                    </a>
-
-                    <a href="profile.html" class="frame-58-zWZ" style="padding:0rem;display:flex;align-items:center;">
-                      <div style="width:100%;height:100%;display:flex;flex-direction: row;">
-                        <div style="width:20%;height:100%;display:flex;align-items:center;">
-                          <img src="img/about.jpg" style="margin-left:10%;width: 80%; height: 80%;object-fit: contain;border-radius: 1rem;border: solid 0.2rem rgb(255, 255, 255);">
-                        </div>
-                        <div style="width: 80%;height:100%;display:flex;flex-direction: column;">
-                          <span class="frame-58-zWZ-sub-1" style="width:100%;height:100%;font-size:16px;display: flex; align-items: center;color:#fff"> 친구 이름</span>                          
-                        </div>
-                      </div>
-                    </a>
-
-                    <a href="profile.html" class="frame-58-zWZ" style="padding:0rem;display:flex;align-items:center;">
-                      <div style="width:100%;height:100%;display:flex;flex-direction: row;">
-                        <div style="width:20%;height:100%;display:flex;align-items:center;">
-                          <img src="img/about.jpg" style="margin-left:10%;width: 80%; height: 80%;object-fit: contain;border-radius: 1rem;border: solid 0.2rem rgb(255, 255, 255);">
-                        </div>
-                        <div style="width: 80%;height:100%;display:flex;flex-direction: column;">
-                          <span class="frame-58-zWZ-sub-1" style="width:100%;height:100%;font-size:16px;display: flex; align-items: center;color:#fff"> 친구 이름</span>                          
-                        </div>
-                      </div>
-                    </a>
-
-                    <a href="profile.html" class="frame-58-zWZ" style="padding:0rem;display:flex;align-items:center;">
-                      <div style="width:100%;height:100%;display:flex;flex-direction: row;">
-                        <div style="width:20%;height:100%;display:flex;align-items:center;">
-                          <img src="img/about.jpg" style="margin-left:10%;width: 80%; height: 80%;object-fit: contain;border-radius: 1rem;border: solid 0.2rem rgb(255, 255, 255);">
-                        </div>
-                        <div style="width: 80%;height:100%;display:flex;flex-direction: column;">
-                          <span class="frame-58-zWZ-sub-1" style="width:100%;height:100%;font-size:16px;display: flex; align-items: center;color:#fff"> 친구 이름</span>                          
-                        </div>
-                      </div>
-                    </a>
-
-                    <a href="profile.html" class="frame-58-zWZ" style="padding:0rem;display:flex;align-items:center;">
-                      <div style="width:100%;height:100%;display:flex;flex-direction: row;">
-                        <div style="width:20%;height:100%;display:flex;align-items:center;">
-                          <img src="img/about.jpg" style="margin-left:10%;width: 80%; height: 80%;object-fit: contain;border-radius: 1rem;border: solid 0.2rem rgb(255, 255, 255);">
-                        </div>
-                        <div style="width: 80%;height:100%;display:flex;flex-direction: column;">
-                          <span class="frame-58-zWZ-sub-1" style="width:100%;height:100%;font-size:16px;display: flex; align-items: center;color:#fff"> 친구 이름</span>                          
-                        </div>
-                      </div>
-                    </a>
-
-                  </div>
+                  <script>
+                    // 데이터 배열 예시//친구의 '이름''사진''주소'받아야함
+                    var friendData = [
+                      { name: '친구 이름1', imageSrc: 'img/about.jpg', address:'asdf' },
+                      { name: '친구 이름2', imageSrc: 'img/about.jpg', address:'' },
+                      // ... 더 많은 데이터 추가 가능
+                    ];
+                  
+                    // 반복문을 통해 HTML 동적 생성
+                    var friendListContainer = document.getElementById('friendListContainer');
+                    friendData.forEach(function (friend) {
+                      var friendItem = document.createElement('a');
+                      friendItem.href = `profile_friend.${friend.address}.html`;
+                      friendItem.classList.add('frame-58-zWZ');
+                      friendItem.style.padding = '0rem';
+                      friendItem.style.display = 'flex';
+                      friendItem.style.alignItems = 'center';
+                  
+                      var friendContent = document.createElement('div');
+                      friendContent.style.width = '100%';
+                      friendContent.style.height = '100%';
+                      friendContent.style.display = 'flex';
+                      friendContent.style.flexDirection = 'row';
+                  
+                      var imageContainer = document.createElement('div');
+                      imageContainer.style.width = '20%';
+                      imageContainer.style.height = '100%';
+                      imageContainer.style.display = 'flex';
+                      imageContainer.style.alignItems = 'center';
+                  
+                      var image = document.createElement('img');
+                      image.src = friend.imageSrc;
+                      image.style.marginLeft = '10%';
+                      image.style.width = '80%';
+                      image.style.height = '80%';
+                      image.style.objectFit = 'contain';
+                      image.style.borderRadius = '1rem';
+                      image.style.border = 'solid 0.2rem rgb(255, 255, 255)';
+                  
+                      imageContainer.appendChild(image);
+                  
+                      var textContainer = document.createElement('div');
+                      textContainer.style.width = '80%';
+                      textContainer.style.height = '100%';
+                      textContainer.style.display = 'flex';
+                      textContainer.style.flexDirection = 'column';
+                  
+                      var nameText = document.createElement('span');
+                      nameText.classList.add('frame-58-zWZ-sub-1');
+                      nameText.style.width = '100%';
+                      nameText.style.height = '100%';
+                      nameText.style.fontSize = '16px';
+                      nameText.style.display = 'flex';
+                      nameText.style.alignItems = 'center';
+                      nameText.style.color = '#fff';
+                      nameText.textContent = friend.name;
+                  
+                      textContainer.appendChild(nameText);
+                  
+                      friendContent.appendChild(imageContainer);
+                      friendContent.appendChild(textContainer);
+                  
+                      friendItem.appendChild(friendContent);
+                      friendListContainer.appendChild(friendItem);
+                    });
+                  </script>
+                  
                 </div>
     
             
-
-              
-
-              <div class="frame-60-ZRF" style="color: #ffffff;align-items:center;height:12%;display:flex;flex-direction: row;">
-                <button href="main.html" id="toggleButton2" style="margin-right: 20%;height:65%;width:20%;background-color:#525252;color:#ffffff"><span>저 장</span></button>
-                <button href="main.html" id="toggleButton2" style="height:65%;width:20%;background-color:#525252;color:#ffffff;"><span>취 소</span></button>
-
-              </div>
-
-              
-
           </div>
 
 
@@ -229,7 +217,7 @@
                         }
                     
                         // 페이지 이동
-                        var destinationPage = 'profile.' + encodeURIComponent(username) + '.html';
+                        var destinationPage = 'profile_friend.' + encodeURIComponent(username) + '.html';
                         window.location.href = destinationPage;
                       }
                     </script>
@@ -238,9 +226,6 @@
               </div>
           </div>
       </div>
-
-
-      
 
 </div>
     
